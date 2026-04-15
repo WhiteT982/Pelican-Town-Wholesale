@@ -1,0 +1,682 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        "blue704.Pelican_Town_Wholesale.Crops": {
+          "Name": "Crop Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Crops",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Potato, Green Bean, Garlic, Cauliflower"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Tomato, Blueberry, Radish, Melon, Hot Pepper, Wheat"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Pumpkin, Eggplant, Cranberries, Bok Choy, Amaranth, Grape, Yam, Artichoke"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 25 {Crops:TextPlural}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Crops:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Crops:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Crops:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Fish": {
+          "Name": "Fish Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Fish",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Sunfish, Sardine, Flounder, Largemouth Bass, Halibut"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Rainbow Trout, Dorado, Tilapia, Tuna, Red Mullet"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Tiger Trout, Albacore, Midnight Carp, Salmon"
+          },
+          {
+            "RequiredTags": "season_winter",
+            "Value": "PICK_ITEM Squid, Perch, Lingcod"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Catch 10 {Fish:Text}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Fish:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 10 {Fish:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "10",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Fish:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Fish:Price}",
+          "Multiplier": "20"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Ingredients": {
+          "Name": "Ingredients Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Ingredients",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Wheat Flour, Vinegar, Cheese, Goat Cheese, Milk, Goat Milk, Oil, Mayonnaise, Egg"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 25 {Ingredients:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Ingredients:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Ingredients:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Ingredients:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Alcohol": {
+          "Name": "Alcohol Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_BASE_FARMING_LEVEL current 8",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Alcohol:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Alcohol",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Wine, Beer, Mead, Pale Ale"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Brew 25 {Alcohol:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Alcohol:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 {Alcohol:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Alcohol:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Alcohol:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Fruit": {
+          "Name": "Fruit Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Fruit:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Fruit",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Apricot, Cherry"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Banana, Mango, Orange, Peach"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Apple, Pomegranate"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 10 {Fruit:TextPlural}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Fruit:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 10 {Fruit:TextPlural} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "10",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Fruit:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Fruit:Price}",
+          "Multiplier": "20"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Bait": {
+          "Name": "Willy's Bait",
+          "Requester": "Willy",
+          "Duration": "ThreeDays",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I need some {Bait:Text} for a fishin' trip I'm headin' out on in three days. Could bring me some before I leave?",
+          "RandomizedElements": [
+            {
+              "Name": "Bait",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Bait, Magnet, Wild Bait, Deluxe Bait"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Craft 25 {Bait:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Bait:Tags}"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 25 {Bait:Text} to Willy",
+              "RequiredCount": "25",
+              "Data": {
+    "AcceptedContextTags": "{Bait:Tags}",
+    "TargetName": "Willy"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "2500"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.CopperBars": {
+          "Name": "Clint's Crafting Bars",
+          "Requester": "Clint",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 1",
+          "SpecialRule": "",
+          "Text": "I've run out of Copper Bars and I have an order that I need to complete. Could you bring me some by the end of the week?",
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 Copper Bars",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "color_copper, furnace_item, use_reverse_name_for_sorting"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 25 Copper Bars to Clint",
+              "RequiredCount": "25",
+              "Data": {
+    "AcceptedContextTags": "color_copper, furnace_item, use_reverse_name_for_sorting",
+    "TargetName": "Clint"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 3000
+        }
+      }
+          ]
+        },
+         "blue704.Pelican_Town_Wholesale.IronBars": {
+          "Name": "Clint's Crafting Bars",
+          "Requester": "Clint",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+          "SpecialRule": "",
+          "Text": "I've run out of Iron Bars and I have an order that I need to complete. Could you bring me some by the end of the week?",
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 Iron Bars",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "color_iron, furnace_item, use_reverse_name_for_sorting"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 25 Iron Bars to Clint",
+              "RequiredCount": "25",
+              "Data": {
+    "AcceptedContextTags": "color_iron, furnace_item, use_reverse_name_for_sorting",
+    "TargetName": "Clint"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 6000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.GoldBars": {
+          "Name": "Clint's Crafting Bars",
+          "Requester": "Clint",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 80",
+          "SpecialRule": "",
+          "Text": "I've run out of Gold Bars and I have an order that I need to complete. Could you bring me some by the end of the week?",
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 Gold Bars",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "color_gold, furnace_item, use_reverse_name_for_sorting"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 25 Gold Bars to Clint",
+              "RequiredCount": "25",
+              "Data": {
+    "AcceptedContextTags": "color_gold, furnace_item, use_reverse_name_for_sorting",
+    "TargetName": "Clint"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 10000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.MaruOre": {
+          "Name": "Maru's Test",
+          "Requester": "Maru",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "LOCATION_ACCESSIBLE Desert",
+          "SpecialRule": "",
+          "Text": "I've heard that Iridium Ore is nearly indestructible and I'd like to run a few tests on it. Please bring me 100 Iridium Ores by the end of the week.",
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 100 Iridium Ore",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "color_iridium, ore_item, use_reverse_name_for_sorting"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 100 Iridium Ore to Maru",
+              "RequiredCount": "100",
+              "Data": {
+    "AcceptedContextTags": "color_iridium, ore_item, use_reverse_name_for_sorting",
+    "TargetName": "Maru"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 15000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.DemetriusForage": {
+          "Name": "Demetrius' Research",
+          "Requester": "Demetrius",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm writing a paper about the local flora of the Valley, but I need some specimens for closer study. Please bring me 10 {Forage:TextPlural} when you can.",
+          "RandomizedElements": [
+            {
+              "Name": "Forage",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Leek, Wild Horseradish, Daffodil, Dandelion, Spring Onion"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Grape, Spice Berry, Sweet Pea"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Blackberry, Common Mushroom, Hazelnut, Wild Plum"
+          },
+          {
+            "RequiredTags": "season_winter",
+            "Value": "PICK_ITEM Crocus, Crystal Fruit, Holly, Snow Yam, Winter Root"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 10 {Forage:Text}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Forage:Tags}"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 10 {Forage:Text} to Demetrius",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Forage:Tags}",
+                "TargetName": "Demetrius"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Forage:Price}",
+          "Multiplier": "20"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Minerals": {
+          "Name": "Minerals Special Order",
+          "Requester": "Gunther",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "The local geology society would like to put on a showcase of local minerals and have asked me to furnish them. Could you ship any extra minerals that you have to fulfill their order?",
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 10 Minerals",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "category_minerals"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "Ship 10 Minerals",
+              "RequiredCount": "10",
+              "Data": {
+    "AcceptedContextTags": "category_minerals"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Bones": {
+          "Name": "Fossils Special Order",
+          "Requester": "Gunther",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "The local paleontology society would like to put on a showcase of local fossils and have asked me to furnish them. Could you ship any extra fossils that you have to fulfill their order?",
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 10 Fossils",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "prehistoric_item/fossil_item/bone_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "Ship 10 Fossils",
+              "RequiredCount": "10",
+              "Data": {
+    "AcceptedContextTags": "prehistoric_item/fossil_item/bone_item"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 7500
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.StoreProducts": {
+          "Name": "Artisan Goods Order",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_BASE_FARMING_LEVEL current 4",
+          "SpecialRule": "",
+          "Text": "The store is running low on {Goods:Text}. Please bring me some extra as soon as you can. Thanks!",
+          "RandomizedElements": [
+            {
+              "Name": "Goods",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Pickles, Jelly"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 {Goods:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Goods:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "Bring 25 {Goods:Text} to the store and drop them off in the box.",
+        "RequiredCount": "25",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{Goods:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Goods:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        }
+    }
+}
+  ]
+}
