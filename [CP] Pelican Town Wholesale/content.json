@@ -1,0 +1,9 @@
+{
+  "Format": "2.9.1",
+  "Changes": [
+    {
+      "Action": "Include",
+      "FromFile": "Data/mappatches.json, Data/specialorders.json"
+    }
+]
+}
