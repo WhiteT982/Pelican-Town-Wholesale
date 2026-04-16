@@ -9,7 +9,7 @@
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
-          "RequiredTags": "!season_winter",
+          "RequiredTags": "!season_winter, !dropbox_GusFridge",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
           "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
@@ -69,7 +69,7 @@
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
-          "RequiredTags": "",
+          "RequiredTags": "!dropbox_GusFridge",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
           "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
@@ -133,7 +133,7 @@
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
-          "RequiredTags": "",
+          "RequiredTags": "!dropbox_GusFridge",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
           "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
@@ -142,7 +142,7 @@
               "Name": "Ingredients",
               "Values": [
           {
-            "Value": "PICK_ITEM Wheat Flour, Vinegar, Cheese, Goat Cheese, Milk, Goat Milk, Oil, Mayonnaise, Egg"
+            "Value": "PICK_ITEM Wheat Flour, Vinegar, Cheese, Goat Cheese, Oil, Mayonnaise"
           }
         ]
       }
@@ -150,7 +150,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Harvest 25 {Ingredients:Text}",
+              "Text": "Collect 25 {Ingredients:Text}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -179,12 +179,96 @@
       }
           ]
         },
+        "blue704.Pelican_Town_Wholesale.Eggs": {
+          "Name": "Eggs Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "BUILDINGS_CONSTRUCTED All Coop 1",
+          "SpecialRule": "",
+          "Text": "Requests for my special omelette are through the roof! Could you please bring some eggs by the Saloon so that I can keep up with the demand?",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 24 Eggs",
+              "RequiredCount": "24",
+              "Data": {
+                "AcceptedContextTags": "egg_item"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 24 of any eggs in Gus' refrigerator in the Saloon",
+              "RequiredCount": "24",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "egg_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Milk": {
+          "Name": "Milk Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "BUILDINGS_CONSTRUCTED All Barn 1",
+          "SpecialRule": "",
+          "Text": "My milk supplier has left town. Do you think you could provide enough milk for the Saloon?",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 bottles of Milk",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "milk_item"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 bottles of milk in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "milk_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 7500
+        }
+      }
+          ]
+        },
         "blue704.Pelican_Town_Wholesale.Alcohol": {
           "Name": "Alcohol Special Order",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
-          "RequiredTags": "",
+          "RequiredTags": "!dropbox_GusFridge",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "PLAYER_BASE_FARMING_LEVEL current 8",
           "SpecialRule": "",
@@ -238,7 +322,7 @@
           "Repeatable": "True",
           "RequiredTags": "!season_winter",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "SpecialRule": "",
+          "SpecialRule": "!dropbox_GusFridge",
           "Text": "I'm running out of {Fruit:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
           "RandomizedElements": [
             {
@@ -630,7 +714,7 @@
           "Requester": "Pierre",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
-          "RequiredTags": "",
+          "RequiredTags": "!dropbox_PierreBox",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "PLAYER_BASE_FARMING_LEVEL current 4",
           "SpecialRule": "",
