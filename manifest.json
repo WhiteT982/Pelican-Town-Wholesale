@@ -1,7 +1,7 @@
 {
   "Name": "Pelican Town Wholesale",
   "Author": "blue704",
-  "Version": "1.0.3",
+  "Version": "1.0.4",
   "Description": "Sell wholesale goods to the villagers of Pelican Town throught a new storefront.",
   "UniqueID": "blue704.Pelican_Town_Wholesale",
   "UpdateKeys": ["Nexus:44980"],
