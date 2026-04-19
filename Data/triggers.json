@@ -1,0 +1,18 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "WholesaleStoreMapPatch": {
+          "Id": "WholesaleStoreMapPatch",
+          "Trigger": "DayStarted",
+          "Condition": "DAYS_PLAYED 14",
+          "Actions": [
+            "AddMail current WholesaleStoreMapPatch received"
+          ]
+        }
+          }
+          }
+        ]
+    }
