@@ -19,6 +19,9 @@
         {
       "Action": "EditMap",
       "Target": "Maps/Town",
+      "When": {
+          "HasFlag": "WholesaleStoreMapPatch"
+      },
       "FromFile": "assets/z_wholesaleshop.tmx",
       "FromArea": {
         "X": 8,
