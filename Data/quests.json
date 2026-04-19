@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "LogName": "Joja Machines Quest Data",
+      "Target": "Data/Quests",
+      "Entries": {
+        "FirstParsnipQuest": "ItemDelivery/Gus' Parsnips/Gus would like to try out the new Pelican Town Wholesale shop but would like you to deliver him some parsnips first./Deliver 10 fresh Parsnips to Gus./Gus (O)24 10/-1/700/-1/false/Lewis was right. These are some mighty fine parsnips. For any future orders you can just place them directly in my fridge. Thanks @. It's a pleasure doing business with you!$h#$action AddMail current FirstParsnipQuestCompleted received"
+      }
+    }
+]
+}
