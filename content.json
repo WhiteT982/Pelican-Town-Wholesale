@@ -3,7 +3,7 @@
   "Changes": [
     {
       "Action": "Include",
-      "FromFile": "Data/mappatches.json, Data/specialorders.json"
+      "FromFile": "Data/mappatches.json, Data/specialorders.json, Data/events.json, Data/quests.json, Data/triggers.json"
     }
 ]
 }
