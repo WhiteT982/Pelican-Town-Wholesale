@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "178", "ContextTags"],
+      "Entries": {
+            "hay_item": "hay_item"
+        }
+    }
+]
+}
