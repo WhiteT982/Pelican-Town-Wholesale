@@ -1,0 +1,12 @@
+{
+    "Changes": [
+        {
+        "Action": "EditData",
+      "LogName": "Wholsale Shop built Data",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "PelicanTownWholesale/GameStateQuery DAYS_PLAYED 14": "continue/13 59/Lewis 12 59 3 farmer 11 55 1 Gus 10 59 1 Robin 13 57 3/action AddQuest FirstParsnipQuest/skippable/pause 500/animate Robin false true 100 24 25 26 27 27 27 27 27 27 27 27/playSound crafting/move farmer 3 0 2/playSound crafting/pause 500/emote farmer 8/pause 500/faceDirection Lewis 0/speak Lewis \"Almost finished there Robin?\"/playSound crafting/pause 300/speak Robin \"Yep. Just putting the finishing touches on now.\"/playSound Crafting/move farmer 0 3 3 true/pause 200/stopAnimation Robin/pause 200/faceDirection Robin 2/pause 500/speak Robin \"Oh and there's @! You're just in time to see the new Pelican Town Wholesale stand.\"/pause 500/emote farmer 8/faceDirection Lewis 0/pause 500/emote Lewis 32/speak Lewis \"Now that you've taken over the old farm, I thought that it might be nice for the rest of the town to have a place that they could place orders for some of your products.#$b#I'm sure it won't be long before you'll have quite the surplus of items that you'll be looking to sell.$h\"/pause 500/speak Gus \"For a matter of fact I'm currently in need of some fresh parsnips over at the Saloon. Do you think you would be able to supply some for me? I'd be willing to pay a little extra.\"/pause 500/emote farmer 32/pause 500/speak Gus \"And if all goes well I'd be willing to place regular orders for your crops @.#$b#When you have those parsnips be sure to bring them by.\"/pause 500/speak Lewis \"I'm sure once the rest of the town finds out, everyone will be looking to place orders for your products @!$h\"/emote farmer 20/pause 500/end"
+      }
+     }
+    ]
+     }

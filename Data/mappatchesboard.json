@@ -1,0 +1,40 @@
+{
+    "Changes": [
+      {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 11, "Y": 58 },
+                    "Layer": "Paths",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 9, "Y": 57 },
+                    "Layer": "Paths",
+                    "Remove": true
+                }
+            ]
+        },
+        {
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "When": {
+          "HasFlag": "WholesaleStoreMapPatch"
+      },
+      "FromFile": "assets/z_wholesaleboard.tmx",
+      "FromArea": {
+        "X": 10,
+        "Y": 55,
+        "Width": 3,
+        "Height": 3
+      },
+      "ToArea": {
+        "X": 10,
+        "Y": 55,
+        "Width": 3,
+        "Height": 3
+      }
+    }
+    ]
+}
