@@ -1,0 +1,115 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        "blue704.Pelican_Town_Wholesale.AndyFertilizer": {
+          "Name": "Tryin' to get Good Crops",
+          "Requester": "Andy",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "Susan says I need to use some of that fertilizer to help my crops out. I was wonderin' if you could bring me some {Fertilizer:Text} when ya get the chance? I'd much 'preciate it.",
+          "RandomizedElements": [
+            {
+              "Name": "Fertilizer",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Basic Fertilizer, Quality Fertilizer, Basic Retaining Soil, Quality Retaining Soil, Speed-Gro, Deluxe Speed-Gro"
+          }
+    ]
+}
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Craft 50 bags of {Fertilizer:Text}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "{Fertilizer:Tags}"
+              }
+            },
+             {
+              "Type": "Deliver",
+              "Text": "Bring 50 bags of {Fertilizer:Text} to Andy",
+              "RequiredCount": "50",
+              "Data": {
+    "AcceptedContextTags": "{Fertilizer:Tags}",
+    "TargetName": "Andy"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Fertilizer:Price}",
+          "Multiplier": "150"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SophiaFruit": {
+          "Name": "New Wine Recipe",
+          "Requester": "Sophia",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!season_Winter, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "Ummm...I would like to try some new wine recipes but I don't have the fruit that I need. If you can, would you be able to bring me some {Fruit:TextPlural}?",
+          "RandomizedElements": [
+            {
+              "Name": "Fruit",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Apricot, Cherry, FlashShifter.StardewValleyExpandedCP_Pear"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Banana, Mango, Orange, Peach, FlashShifter.StardewValleyExpandedCP_Nectarine"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Apple, Pomegranate, FlashShifter.StardewValleyExpandedCP_Persimmon"
+          }
+    ]
+}
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 10 pieces of {Fruit:Text}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Fruit:Tags}"
+              }
+            },
+             {
+              "Type": "Deliver",
+              "Text": "Bring 10 pieces of {Fruit:Text} to Sophia",
+              "RequiredCount": "10",
+              "Data": {
+    "AcceptedContextTags": "{Fruit:Tags}",
+    "TargetName": "Sophia"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Fruit:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+    }
+}
+  ]
+}
