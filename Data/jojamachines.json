@@ -1,0 +1,112 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        "blue704.Pelican_Town_Wholesale.JojaGoods": {
+          "Name": "Joja Products Order",
+          "Requester": "Morris",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "The store is running low on {JojaGoods:TextPlural}. Please drop some off in the dropbox inside JojaMart within the next two weeks.",
+          "RandomizedElements": [
+            {
+              "Name": "JojaGoods",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Adam.Joja_Pickle, Adam.Joja_Jelly, Adam.Joja_AgedRoe, Adam.Joja_DriedFish"
+          }
+    ]
+}
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Process 25 {JojaGoods:TextPlural}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{JojaGoods:Tags}"
+              }
+            },
+             {
+              "Type": "Donate",
+              "Text": "Deliver 25 {JojaGoods:TextPlural}",
+              "RequiredCount": "25",
+              "Data": {
+                "DropBox": "JojaPROorder",
+                "DropBoxGameLocation": "JojaMart",
+                "DropBoxIndicatorLocation": "16 27",
+                "MinimumCapacity": "9",
+                "AcceptedContextTags": "{JojaGoods:Tags}"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{JojaGoods:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.JojaAlcohol": {
+          "Name": "Joja Alcohol Order",
+          "Requester": "Morris",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "The store is running low on {JojaAlcohol:Text}. Please drop some off in the dropbox inside JojaMart within the next two weeks.",
+          "RandomizedElements": [
+            {
+              "Name": "JojaAlcohol",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Adam.Joja_Wine, Adam.Joja_Beer, Adam.Joja_Mead, Adam.Joja_PaleAle"
+          }
+    ]
+}
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Process 25 {JojaAlcohol:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{JojaAlcohol:Tags}"
+              }
+            },
+             {
+              "Type": "Donate",
+              "Text": "Deliver 25 {JojaAlcohol:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "DropBox": "JojaPROorder",
+                "DropBoxGameLocation": "JojaMart",
+                "DropBoxIndicatorLocation": "16 27",
+                "MinimumCapacity": "9",
+                "AcceptedContextTags": "{JojaAlcohol:Tags}"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{JojaAlcohol:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        }
+    }
+}
+  ]
+}
