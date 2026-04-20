@@ -1,9 +1,45 @@
 {
   "Format": "2.9.1",
+  "ConfigSchema": {
+    "EnableWholesaleBoard": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    }
+  },
   "Changes": [
     {
       "Action": "Include",
-      "FromFile": "Data/mappatches.json, Data/specialorders.json, Data/events.json, Data/quests.json, Data/triggers.json"
+      "FromFile": "Data/specialorders.json, Data/contexttags.json, Data/events.json, Data/quests.json, Data/triggers.json"
+    },
+    {
+      "When": {
+        "HasMod": "Adam.Joja_Machines"
+      },
+      "Action": "Include",
+      "FromFile": "Data/jojamachines.json"
+    },
+    {
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Action": "Include",
+      "FromFile": "Data/SVE.json"
+    },
+    {
+      "LogName": "Change to Board",
+      "Action": "Include",
+      "FromFile": "Data/mappatchesboard.json, Data/eventsboard.json",
+      "When": {
+        "EnableWholesaleBoard": "true"
+      }
+    },
+    {
+      "LogName": "Change to Stand",
+      "Action": "Include",
+      "FromFile": "Data/mappatchesstand.json, Data/eventsstand.json",
+      "When": {
+        "EnableWholesaleBoard": "false"
+      }
     }
 ]
 }
