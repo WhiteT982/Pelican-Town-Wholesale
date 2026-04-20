@@ -582,7 +582,7 @@
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm writing a paper about the local flora of the Valley, but I need some specimens for closer study. Please bring me 10 {Forage:TextPlural} when you can.",
+          "Text": "I'm writing a paper about the local flora of the Valley, but I need some specimens for closer study. Please bring me 5 {Forage:TextPlural} when you can.",
           "RandomizedElements": [
             {
               "Name": "Forage",
@@ -609,16 +609,16 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 10 {Forage:Text}",
-              "RequiredCount": "10",
+              "Text": "Collect 5 {Forage:Text}",
+              "RequiredCount": "5",
               "Data": {
                 "AcceptedContextTags": "{Forage:Tags}"
               }
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 10 {Forage:Text} to Demetrius",
-              "RequiredCount": "10",
+              "Text": "Bring 5 {Forage:Text} to Demetrius",
+              "RequiredCount": "5",
               "Data": {
                 "AcceptedContextTags": "{Forage:Tags}",
                 "TargetName": "Demetrius"
@@ -756,6 +756,189 @@
         "Data": {
           "Amount": "{Goods:Price}",
           "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.MonsterParts": {
+          "Name": "Monster Parts Order",
+          "Requester": "Wizard",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 1",
+          "SpecialRule": "",
+          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me some {Parts:Text}.",
+          "RandomizedElements": [
+            {
+              "Name": "Parts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Slime, Bug Meat"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 50 {Parts:Text}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "{Parts:Tags}"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 50 {Parts:Text} to the Wizard",
+              "RequiredCount": "50",
+              "Data": {
+    "AcceptedContextTags": "{Parts:Tags}",
+    "TargetName": "Wizard"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 1000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.MonsterParts2": {
+          "Name": "Monster Parts Order",
+          "Requester": "Wizard",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+          "SpecialRule": "",
+          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me some {Parts:TextPlural}.",
+          "RandomizedElements": [
+            {
+              "Name": "Parts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Bat Wing, Bone Fragment"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 50 {Parts:TextPlural}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "{Parts:Tags}"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 50 {Parts:TextPlural} to the Wizard",
+              "RequiredCount": "50",
+              "Data": {
+    "AcceptedContextTags": "{Parts:Tags}",
+    "TargetName": "Wizard"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 3000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.MonsterParts3": {
+          "Name": "Monster Parts Order",
+          "Requester": "Wizard",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 80",
+          "SpecialRule": "",
+          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me some {Parts:TextPlural}.",
+          "RandomizedElements": [
+            {
+              "Name": "Parts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Solar Essence, Void Essence"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 50 {Parts:TextPlural}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "{Parts:Tags}"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 50 {Parts:TextPlural} to the Wizard",
+              "RequiredCount": "50",
+              "Data": {
+    "AcceptedContextTags": "{Parts:Tags}",
+    "TargetName": "Wizard"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 10000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Hay": {
+          "Name": "Hay Needed!",
+          "Requester": "Marnie",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter, !season_spring, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "",
+          "SpecialRule": "",
+          "Text": "I have a customer that needs a large order of Hay delivered this month and I need some help. Could you bring me 250 pieces?",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 250 pieces of Hay",
+              "RequiredCount": "250",
+              "Data": {
+                "AcceptedContextTags": "color_yellow"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 250 pieces of Hay to Marnie",
+              "RequiredCount": "250",
+              "Data": {
+    "AcceptedContextTags": "color_yellow, hay_item",
+    "TargetName": "Marnie"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 10000
         }
       }
           ]
