@@ -12,7 +12,7 @@
           "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
           "RandomizedElements": [
             {
               "Name": "Crops",
@@ -72,7 +72,7 @@
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 10 {Fish:Text} quickly and I'll pay top dollar!",
           "RandomizedElements": [
             {
               "Name": "Fish",
@@ -136,13 +136,13 @@
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Ingredients:Text} quickly and I'll pay top dollar!",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
               "Values": [
           {
-            "Value": "PICK_ITEM Wheat Flour, Vinegar, Cheese, Goat Cheese, Oil, Mayonnaise"
+            "Value": "PICK_ITEM Cheese, Goat Cheese, Mayonnaise"
           }
         ]
       }
@@ -179,6 +179,210 @@
       }
           ]
         },
+        "blue704.Pelican_Town_Wholesale.WheatFlour": {
+          "Name": "Ingredients Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted, !season_winter",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre's store is out! Please drop off 25 bags of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Ingredients",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Wheat Flour"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 bags of {Ingredients:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Ingredients:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 bags of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Ingredients:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Ingredients:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Oil": {
+          "Name": "Ingredients Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre doesn't have anymore at his store! Please drop off 25 bottles of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Ingredients",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Oil"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 bottles of {Ingredients:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Ingredients:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 bottles of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Ingredients:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Ingredients:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Vinegar": {
+          "Name": "Ingredients Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted, season_spring",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre's doesn't have anymore!. Please drop off 25 bottles of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Ingredients",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Vinegar"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 bottles of {Ingredients:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Ingredients:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 bottles of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Ingredients:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Ingredients:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Sugar": {
+          "Name": "Ingredients Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted, season_fall",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre doesn't have anymore! Please drop off 25 bags of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Ingredients",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Sugar"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 bags of {Ingredients:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Ingredients:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 bags of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Ingredients:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Ingredients:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
         "blue704.Pelican_Town_Wholesale.Eggs": {
           "Name": "Eggs Special Order",
           "Requester": "Gus",
@@ -188,7 +392,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "BUILDINGS_CONSTRUCTED All Coop 1",
           "SpecialRule": "",
-          "Text": "Requests for my special omelette are through the roof! Could you please bring some eggs by the Saloon so that I can keep up with the demand?",
+          "Text": "Requests for my special omelette are through the roof! Could you please bring two dozen eggs by the Saloon so that I can keep up with the demand?",
           "RandomizedElements": [],
           "Objectives": [
             {
@@ -230,7 +434,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "BUILDINGS_CONSTRUCTED All Barn 1",
           "SpecialRule": "",
-          "Text": "My milk supplier has left town. Do you think you could provide enough milk for the Saloon?",
+          "Text": "My milk supplier has left town. Do you think you could provide enough milk for the Saloon? I need 25 bottles before two weeks are up.",
           "RandomizedElements": [],
           "Objectives": [
             {
@@ -272,7 +476,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "PLAYER_BASE_FARMING_LEVEL current 8",
           "SpecialRule": "",
-          "Text": "I'm running out of {Alcohol:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "Text": "I'm running out of {Alcohol:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 bottles of {Alcohol:Text} quickly and I'll pay top dollar!",
           "RandomizedElements": [
             {
               "Name": "Alcohol",
@@ -323,7 +527,7 @@
           "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "!dropbox_GusFridge",
-          "Text": "I'm running out of {Fruit:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop some off quickly and I'll pay top dollar!",
+          "Text": "I'm running out of {Fruit:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 10 {Fruit:TextPlural} quickly and I'll pay top dollar!",
           "RandomizedElements": [
             {
               "Name": "Fruit",
@@ -383,7 +587,7 @@
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I need some {Bait:Text} for a fishin' trip I'm headin' out on in three days. Could bring me some before I leave?",
+          "Text": "I need 25 pieces of {Bait:Text} for a fishin' trip I'm headin' out on in three days. Could bring me some before I leave?",
           "RandomizedElements": [
             {
               "Name": "Bait",
@@ -431,7 +635,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "MINE_LOWEST_LEVEL_REACHED 1",
           "SpecialRule": "",
-          "Text": "I've run out of Copper Bars and I have an order that I need to complete. Could you bring me some by the end of the week?",
+          "Text": "I've run out of Copper Bars and I have an order that I need to complete. Could you bring me 25 Copper Bars by the end of the week?",
           "Objectives": [
             {
               "Type": "Collect",
@@ -469,7 +673,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "MINE_LOWEST_LEVEL_REACHED 40",
           "SpecialRule": "",
-          "Text": "I've run out of Iron Bars and I have an order that I need to complete. Could you bring me some by the end of the week?",
+          "Text": "I've run out of Iron Bars and I have an order that I need to complete. Could you bring me 25 Iron Bars by the end of the week?",
           "Objectives": [
             {
               "Type": "Collect",
@@ -507,7 +711,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "MINE_LOWEST_LEVEL_REACHED 80",
           "SpecialRule": "",
-          "Text": "I've run out of Gold Bars and I have an order that I need to complete. Could you bring me some by the end of the week?",
+          "Text": "I've run out of Gold Bars and I have an order that I need to complete. Could you bring me 25 Gold Bars by the end of the week?",
           "Objectives": [
             {
               "Type": "Collect",
@@ -643,7 +847,7 @@
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "The local geology society would like to put on a showcase of local minerals and have asked me to furnish them. Could you ship any extra minerals that you have to fulfill their order?",
+          "Text": "The local geology society would like to put on a showcase of local minerals and have asked me to furnish them. Could you ship any 10 minerals that you have to fulfill their order?",
           "RandomizedElements": null,
           "Objectives": [
             {
@@ -680,7 +884,7 @@
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "The local paleontology society would like to put on a showcase of local fossils and have asked me to furnish them. Could you ship any extra fossils that you have to fulfill their order?",
+          "Text": "The local paleontology society would like to put on a showcase of local fossils and have asked me to furnish them. Could you ship any 10 fossils that you have to fulfill their order?",
           "RandomizedElements": null,
           "Objectives": [
             {
@@ -718,7 +922,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "PLAYER_BASE_FARMING_LEVEL current 4",
           "SpecialRule": "",
-          "Text": "The store is running low on {Goods:Text}. Please bring me some extra as soon as you can. Thanks!",
+          "Text": "The store is running low on {Goods:Text}. Please bring me 25 jars of {Goods:Text} as soon as you can. Thanks!",
           "RandomizedElements": [
             {
               "Name": "Goods",
@@ -769,7 +973,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "MINE_LOWEST_LEVEL_REACHED 1",
           "SpecialRule": "",
-          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me some {Parts:Text}.",
+          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me 50 pieces {Parts:Text}.",
           "RandomizedElements": [
             {
               "Name": "Parts",
@@ -817,7 +1021,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "MINE_LOWEST_LEVEL_REACHED 40",
           "SpecialRule": "",
-          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me some {Parts:TextPlural}.",
+          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me 50 {Parts:TextPlural}.",
           "RandomizedElements": [
             {
               "Name": "Parts",
@@ -865,7 +1069,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "MINE_LOWEST_LEVEL_REACHED 80",
           "SpecialRule": "",
-          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me some {Parts:TextPlural}.",
+          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me 50 {Parts:TextPlural}.",
           "RandomizedElements": [
             {
               "Name": "Parts",

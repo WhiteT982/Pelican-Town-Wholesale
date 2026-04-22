@@ -12,7 +12,7 @@
           "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "The store is running low on {JojaGoods:TextPlural}. Please drop some off in the dropbox inside JojaMart within the next two weeks.",
+          "Text": "The store is running low on {JojaGoods:TextPlural}. Please drop off 25 {JojaGoods:TextPlural} in the dropbox inside JojaMart within the next two weeks.",
           "RandomizedElements": [
             {
               "Name": "JojaGoods",
@@ -63,7 +63,7 @@
           "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "The store is running low on {JojaAlcohol:Text}. Please drop some off in the dropbox inside JojaMart within the next two weeks.",
+          "Text": "The store is running low on {JojaAlcohol:Text}. Please drop off 25 bottles of {JojaAlcohol:Text} in the dropbox inside JojaMart within the next two weeks.",
           "RandomizedElements": [
             {
               "Name": "JojaAlcohol",
