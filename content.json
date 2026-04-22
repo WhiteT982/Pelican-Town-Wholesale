@@ -1,15 +1,16 @@
 {
   "Format": "2.9.1",
   "ConfigSchema": {
-    "EnableWholesaleBoard": {
-      "AllowValues": "true, false",
-      "Default": "true"
+    "Board Appearance and Location": {
+      "AllowValues": "Order Board, Order Stand, Seven Deadly Sins Compatibility",
+      "Default": "Order Board",
+      "Section": "Appearance and Map Compatibility"
     }
   },
   "Changes": [
     {
       "Action": "Include",
-      "FromFile": "Data/specialorders.json, Data/contexttags.json, Data/events.json, Data/quests.json, Data/triggers.json"
+      "FromFile": "Data/specialorders.json, Data/contexttags.json, Data/quests.json, Data/triggers.json"
     },
     {
       "When": {
@@ -28,17 +29,25 @@
     {
       "LogName": "Change to Board",
       "Action": "Include",
-      "FromFile": "Data/mappatchesboard.json, Data/eventsboard.json",
+      "FromFile": "Data/mappatchesboard.json",
       "When": {
-        "EnableWholesaleBoard": "true"
+        "Board Appearance and Location": "Order Board"
       }
     },
     {
       "LogName": "Change to Stand",
       "Action": "Include",
-      "FromFile": "Data/mappatchesstand.json, Data/eventsstand.json",
+      "FromFile": "Data/mappatchesstand.json",
       "When": {
-        "EnableWholesaleBoard": "false"
+        "Board Appearance and Location": "Order Stand"
+      }
+    },
+    {
+      "LogName": "Change to SDS",
+      "Action": "Include",
+      "FromFile": "Data/mappatchesSDS.json",
+      "When": {
+        "Board Appearance and Location": "Seven Deadly Sins Compatibility"
       }
     }
 ]
