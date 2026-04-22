@@ -12,7 +12,7 @@
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "Susan says I need to use some of that fertilizer to help my crops out. I was wonderin' if you could bring me some {Fertilizer:Text} when ya get the chance? I'd much 'preciate it.",
+          "Text": "Susan says I need to use some of that fertilizer to help my crops out. I was wonderin' if you could bring me 50 bags of {Fertilizer:Text} when ya get the chance? I'd much 'preciate it.",
           "RandomizedElements": [
             {
               "Name": "Fertilizer",
@@ -60,7 +60,7 @@
           "RequiredTags": "!season_Winter, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "Ummm...I would like to try some new wine recipes but I don't have the fruit that I need. If you can, would you be able to bring me some {Fruit:TextPlural}?",
+          "Text": "Ummm...I would like to try some new wine recipes but I don't have the fruit that I need. If you can, would you be able to bring me 10 {Fruit:TextPlural}?",
           "RandomizedElements": [
             {
               "Name": "Fruit",
@@ -105,6 +105,242 @@
         "Data": {
           "Amount": "{Fruit:Price}",
           "Multiplier": "25"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SVECrops": {
+          "Name": "Crop Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Crops",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Cucumber, FlashShifter.StardewValleyExpandedCP_Gold_Carrot, FlashShifter.StardewValleyExpandedCP_Salal_Berry"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Butternut_Squash, FlashShifter.StardewValleyExpandedCP_Gold_Carrot, FlashShifter.StardewValleyExpandedCP_Salal_Berry"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Sweet_Potato, FlashShifter.StardewValleyExpandedCP_Gold_Carrot"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 25 {Crops:TextPlural}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Crops:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Crops:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Crops:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SVEFish": {
+          "Name": "Fish Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 10 {Fish:Text} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Fish",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Butterfish, FlashShifter.StardewValleyExpandedCP_King_Salmon, FlashShifter.StardewValleyExpandedCP_Puppyfish"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Butterfish, FlashShifter.StardewValleyExpandedCP_King_Salmon, FlashShifter.StardewValleyExpandedCP_Puppyfish"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Bull_Trout, FlashShifter.StardewValleyExpandedCP_Butterfish, FlashShifter.StardewValleyExpandedCP_Puppyfish, FlashShifter.StardewValleyExpandedCP_Gar"
+          },
+          {
+            "RequiredTags": "season_winter",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Bull_Trout, FlashShifter.StardewValleyExpandedCP_Starfish"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Catch 10 {Fish:Text}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Fish:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 10 {Fish:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "10",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Fish:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Fish:Price}",
+          "Multiplier": "20"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SVEIngredients": {
+          "Name": "Ingredients Special Order",
+          "Requester": "Gus",
+          "Duration": "Month",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 sticks of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Ingredients",
+              "Values": [
+          {
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Butter"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 25 {Ingredients:Text}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Ingredients:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 sticks of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Ingredients:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Ingredients:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SVEDemetriusForage": {
+          "Name": "Demetrius' Research",
+          "Requester": "Demetrius",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm writing a paper about the local flora of the Valley, but I need some specimens for closer study. Please bring me 5 {Forage:TextPlural} when you can.",
+          "RandomizedElements": [
+            {
+              "Name": "Forage",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Lucky_Four_Leaf_Clover, FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Poison_Mushroom, FlashShifter.StardewValleyExpandedCP_Red_Baneberry"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Mushroom_Colony, FlashShifter.StardewValleyExpandedCP_Poison_Mushroom"
+          },
+          {
+            "RequiredTags": "season_winter",
+            "Value": "PICK_ITEM FlashShifter.StardewValleyExpandedCP_Bearberrys"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 5 {Forage:Text}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{Forage:Tags}"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Bring 5 {Forage:Text} to Demetrius",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{Forage:Tags}",
+                "TargetName": "Demetrius"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Forage:Price}",
+          "Multiplier": "20"
         }
       }
           ]
