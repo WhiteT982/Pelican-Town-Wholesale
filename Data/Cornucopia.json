@@ -1,0 +1,70 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        "blue704.Pelican_Town_Wholesale.CornucopiaCrops": {
+          "Name": "Crop Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Crops",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Cornucopia_Basil, Cornucopia_Onion, Cornucopia_Spinach, Cornucopia_SesameSeeds"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Cornucopia_BellPepper, Cornucopia_Cucumber, Cornucopia_Kiwi, Cornucopia_Lettuce, Cornucopia_Sugarcane, Cornucopia_Watermelon"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Cornucopia_Turnip, Cornucopia_Peanut, Cornucopia_Spinach, Cornucopia_Soybeans, Cornucopia_Zucchini"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 25 {Crops:TextPlural}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Crops:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Crops:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Crops:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        }
+    }
+}
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        "blue704.Pelican_Town_Wholesale.CornucopiaExtendedCrops": {
+          "Name": "Crop Special Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
+          "RandomizedElements": [
+            {
+              "Name": "Crops",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Cornucopia_Agave, Cornucopia_Asparagus, Cornucopia_Buckwheat, Cornucopia_Cabbage, Cornucopia_CanaryMelon, Cornucopia_Cantaloupe, Cornucopia_Jalapeno, Cornucopia_PassionFruit, Cornucopia_PintoBeans, Cornucopia_RedOnion, Cornucopia_Shallot, Cornucopia_SugarBeet"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Cornucopia_AdzukiBean, Cornucopia_BlueAgave, Cornucopia_ButternutSquash, Cornucopia_Cassava, Cornucopia_Chickpea, Cornucopia_GreenPeas, Cornucopia_Honeydew, Cornucopia_Groundcherries, Cornucopia_NavyBeans, Cornucopia_Okra, Cornucopia_Quinoa, Cornucopia_WasabiRoot, Cornucopia_BeanSprouts"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Cornucopia_Barley, Cornucopia_BlackBeans, Cornucopia_Celery, Cornucopia_Daikon, Cornucopia_Durum, Cornucopia_Groundcherries, Cornucopia_Habanero, Cornucopia_KidneyBeans, Cornucopia_Oats, Cornucopia_Okra, Cornucopia_SweetPotato, Cornucopia_Lentils"
+          },
+          {
+            "RequiredTags": "season_winter",
+            "Value": "PICK_ITEM Cornucopia_Ginseng, Cornucopia_Ube"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 25 {Crops:TextPlural}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{Crops:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Crops:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Crops:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        }
+    }
+    }
+]
+}

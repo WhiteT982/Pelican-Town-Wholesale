@@ -10,7 +10,7 @@
   "Changes": [
     {
       "Action": "Include",
-      "FromFile": "Data/specialorders.json, Data/contexttags.json, Data/quests.json, Data/triggers.json"
+      "FromFile": "Data/specialorders.json, Data/shop.json, Data/contexttags.json, Data/quests.json, Data/triggers.json"
     },
     {
       "When": {
@@ -25,6 +25,21 @@
       },
       "Action": "Include",
       "FromFile": "Data/SVE.json"
+    },
+    {
+      "When": {
+        "HasMod": "Cornucopia.MoreCrops"
+      },
+      "Action": "Include",
+      "FromFile": "Data/Cornucopia.json"
+    },
+    {
+      "When": {
+        "HasMod": "Cornucopia.MoreCrops",
+        "HasFlag": "Cornucopia.MoreCrops_ExtendedCropsPackEnabled"
+      },
+      "Action": "Include",
+      "FromFile": "Data/CornucopiaExtended.json"
     },
     {
       "LogName": "Change to Board",
