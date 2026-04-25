@@ -4,6 +4,77 @@
       "Action": "EditData",
       "Target": "Data/SpecialOrders",
       "Entries": {
+        "blue704.Pelican_Town_Wholesale.Gus": {
+          "Name": "Gus' Order",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "false",
+          "RequiredTags": "!dropbox_GusFridge",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "Let's see if you can complete an order for me within the next two weeks? I need 10 {Crops:TextPlural} over at the Saloon. Drop them off in my refrigerator after you harvest them.",
+          "RandomizedElements": [
+            {
+              "Name": "Crops",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Parsnip"
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Hot Pepper"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Bok Choy"
+          },
+          {
+            "RequiredTags": "season_winter",
+            "Value": "PICK_ITEM Powdermelon"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Harvest 10 {Crops:TextPlural}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Crops:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "Place 10 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "RequiredCount": "10",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{Crops:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{Crops:Price}",
+          "Multiplier": "20"
+        }
+      },
+      {
+      "Type": "Mail",
+      "Data": {
+        "MailReceived": "FirstParsnipQuestCompleted",
+        "NoLetter": "true"
+              }
+            }
+          ]
+        },
         "blue704.Pelican_Town_Wholesale.Crops": {
           "Name": "Crop Special Order",
           "Requester": "Gus",
@@ -19,7 +90,7 @@
               "Values": [
           {
             "RequiredTags": "season_spring",
-            "Value": "PICK_ITEM Potato, Green Bean, Garlic, Cauliflower"
+            "Value": "PICK_ITEM Parsnip, Potato, Green Bean, Garlic, Cauliflower"
           },
           {
             "RequiredTags": "season_summer",
