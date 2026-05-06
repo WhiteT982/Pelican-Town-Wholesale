@@ -5,14 +5,14 @@
       "Target": "Data/SpecialOrders",
       "Entries": {
         "blue704.Pelican_Town_Wholesale.CornucopiaCrops": {
-          "Name": "Crop Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Crops",
@@ -35,7 +35,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Harvest 25 {Crops:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Crops:Tags}"
@@ -43,7 +43,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",

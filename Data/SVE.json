@@ -5,14 +5,15 @@
       "Target": "Data/SpecialOrders",
       "Entries": {
         "blue704.Pelican_Town_Wholesale.AndyFertilizer": {
-          "Name": "Tryin' to get Good Crops",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.name}}",
           "Requester": "Andy",
           "Duration": "Week",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_BASE_FARMING_LEVEL current 5",
           "SpecialRule": "",
-          "Text": "Susan says I need to use some of that fertilizer to help my crops out. I was wonderin' if you could bring me 50 bags of {Fertilizer:Text} when ya get the chance? I'd much 'preciate it.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.text}}",
           "RandomizedElements": [
             {
               "Name": "Fertilizer",
@@ -26,7 +27,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Craft 50 bags of {Fertilizer:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.collect.text}}",
               "RequiredCount": "50",
               "Data": {
                 "AcceptedContextTags": "{Fertilizer:Tags}"
@@ -34,7 +35,7 @@
             },
              {
               "Type": "Deliver",
-              "Text": "Bring 50 bags of {Fertilizer:Text} to Andy",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.ship.text}}",
               "RequiredCount": "50",
               "Data": {
     "AcceptedContextTags": "{Fertilizer:Tags}",
@@ -53,14 +54,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.SophiaFruit": {
-          "Name": "New Wine Recipe",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.SophiaFruit.name}}",
           "Requester": "Sophia",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!season_Winter, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "Ummm...I would like to try some new wine recipes but I don't have the fruit that I need. If you can, would you be able to bring me 10 {Fruit:TextPlural}?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SophiaFruit.text}}",
           "RandomizedElements": [
             {
               "Name": "Fruit",
@@ -83,7 +84,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 10 pieces of {Fruit:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SophiaFruit.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "{Fruit:Tags}"
@@ -91,7 +92,7 @@
             },
              {
               "Type": "Deliver",
-              "Text": "Bring 10 pieces of {Fruit:Text} to Sophia",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SophiaFruit.ship.text}}",
               "RequiredCount": "10",
               "Data": {
     "AcceptedContextTags": "{Fruit:Tags}",
@@ -110,14 +111,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.SVECrops": {
-          "Name": "Crop Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Crops",
@@ -140,7 +141,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Harvest 25 {Crops:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Crops:Tags}"
@@ -148,7 +149,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -170,14 +171,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.SVEFish": {
-          "Name": "Fish Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 10 {Fish:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Fish",
@@ -204,7 +205,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Catch 10 {Fish:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "{Fish:Tags}"
@@ -212,7 +213,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 10 {Fish:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.ship.text}}",
               "RequiredCount": "10",
               "Data": {
           "DropBox": "GusFridge",
@@ -234,14 +235,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.SVEIngredients": {
-          "Name": "Ingredients Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_MAIL any AnyBarnBuilt",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 sticks of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ButterOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
@@ -255,7 +257,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 {Ingredients:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ButterOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -263,7 +265,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 sticks of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ButterOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -285,14 +287,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.SVEDemetriusForage": {
-          "Name": "Demetrius' Research",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.name}}",
           "Requester": "Demetrius",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm writing a paper about the local flora of the Valley, but I need some specimens for closer study. Please bring me 5 {Forage:TextPlural} when you can.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.text}}",
           "RandomizedElements": [
             {
               "Name": "Forage",
@@ -319,7 +321,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 5 {Forage:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.collect.text}}",
               "RequiredCount": "5",
               "Data": {
                 "AcceptedContextTags": "{Forage:Tags}"
@@ -327,7 +329,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 5 {Forage:Text} to Demetrius",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.ship.text}}",
               "RequiredCount": "5",
               "Data": {
                 "AcceptedContextTags": "{Forage:Tags}",
@@ -341,6 +343,45 @@
         "Data": {
           "Amount": "{Forage:Price}",
           "Multiplier": "20"
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SVESusanKegs": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.name}}",
+          "Requester": "Susan",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT Any 1000077, PLAYER_BASE_FORAGING_LEVEL current 4",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.collect.text}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "color_green, syrup_item"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.ship.text}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "color_green, syrup_item",
+                "TargetName": "Susan"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 7500
         }
       }
           ]

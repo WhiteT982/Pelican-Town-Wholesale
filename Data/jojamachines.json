@@ -5,14 +5,14 @@
       "Target": "Data/SpecialOrders",
       "Entries": {
         "blue704.Pelican_Town_Wholesale.JojaGoods": {
-          "Name": "Joja Products Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.JojaGoods.name}}",
           "Requester": "Morris",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "The store is running low on {JojaGoods:TextPlural}. Please drop off 25 {JojaGoods:TextPlural} in the dropbox inside JojaMart within the next two weeks.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaGoods.text}}",
           "RandomizedElements": [
             {
               "Name": "JojaGoods",
@@ -26,7 +26,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Process 25 {JojaGoods:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaGoods.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{JojaGoods:Tags}"
@@ -34,7 +34,7 @@
             },
              {
               "Type": "Donate",
-              "Text": "Deliver 25 {JojaGoods:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaGoods.ship.text}}",
               "RequiredCount": "25",
               "Data": {
                 "DropBox": "JojaPROorder",
@@ -56,14 +56,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.JojaAlcohol": {
-          "Name": "Joja Alcohol Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.JojaAlcohol.name}}",
           "Requester": "Morris",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "The store is running low on {JojaAlcohol:Text}. Please drop off 25 bottles of {JojaAlcohol:Text} in the dropbox inside JojaMart within the next two weeks.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaAlcohol.text}}",
           "RandomizedElements": [
             {
               "Name": "JojaAlcohol",
@@ -77,7 +77,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Process 25 {JojaAlcohol:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaAlcohol.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{JojaAlcohol:Tags}"
@@ -85,7 +85,7 @@
             },
              {
               "Type": "Donate",
-              "Text": "Deliver 25 {JojaAlcohol:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaAlcohol.ship.text}}",
               "RequiredCount": "25",
               "Data": {
                 "DropBox": "JojaPROorder",
