@@ -7,6 +7,54 @@
       "Entries": {
             "hay_item": "hay_item"
         }
+    },
+     {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "18", "ContextTags"],
+      "Entries": {
+            "flower_item": "flower_item"
+        }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "22", "ContextTags"],
+      "Entries": {
+            "flower_item": "flower_item"
+        }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "247", "ContextTags"],
+      "Entries": {
+            "oil_item": "oil_item"
+        }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "419", "ContextTags"],
+      "Entries": {
+            "vinegar_item": "vinegar_item"
+        }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "382", "ContextTags"],
+      "Entries": {
+            "coal_item": "coal_item"
+        }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [ "428", "ContextTags"],
+      "Entries": {
+            "cloth_item": "cloth_item"
+        }
     }
 ]
 }

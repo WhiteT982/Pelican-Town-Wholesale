@@ -1,0 +1,15 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "LogName": "JojaCC Strings Data",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "SpiritsEveMonster0": "{{i18n:blue704.PelicanTownWholesale.StringsBugs}}",
+        "SpiritsEveMonster2": "{{i18n:blue704.PelicanTownWholesale.StringsBrutes}}",
+        "blue704.Pelican_Town_Wholesale.Monsters.text": "{{i18n:blue704.Pelican_Town_Wholesale.Monsters.text}}",
+        "blue704.Pelican_Town_Wholesale.Monsters.collect.text": "{{i18n:blue704.Pelican_Town_Wholesale.Monsters.collect.text}}"
+      }
+    }
+]
+}

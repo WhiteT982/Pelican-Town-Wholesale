@@ -5,14 +5,14 @@
       "Target": "Data/SpecialOrders",
       "Entries": {
         "blue704.Pelican_Town_Wholesale.Gus": {
-          "Name": "Gus' Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.GusOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "false",
           "RequiredTags": "!dropbox_GusFridge",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "Let's see if you can complete an order for me within the next two weeks? I need 10 {Crops:TextPlural} over at the Saloon. Drop them off in my refrigerator after you harvest them.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.GusOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Crops",
@@ -39,7 +39,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Harvest 10 {Crops:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.GusOrder.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "{Crops:Tags}"
@@ -47,7 +47,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 10 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.GusOrder.ship.text}}",
               "RequiredCount": "10",
               "Data": {
           "DropBox": "GusFridge",
@@ -76,14 +76,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Crops": {
-          "Name": "Crop Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Crops",
@@ -106,7 +106,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Harvest 25 {Crops:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Crops:Tags}"
@@ -114,7 +114,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 {Crops:TextPlural} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.CropSpecialOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -136,14 +136,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Fish": {
-          "Name": "Fish Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Fish:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 10 {Fish:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Fish",
@@ -170,7 +170,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Catch 10 {Fish:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "{Fish:Tags}"
@@ -178,7 +178,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 10 {Fish:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FishOrder.ship.text}}",
               "RequiredCount": "10",
               "Data": {
           "DropBox": "GusFridge",
@@ -200,14 +200,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Ingredients": {
-          "Name": "Ingredients Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_BASE_FARMING_LEVEL current 4",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Ingredients:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
@@ -221,7 +222,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 {Ingredients:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -229,7 +230,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -251,14 +252,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.WheatFlour": {
-          "Name": "Ingredients Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted, !season_winter",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre's store is out! Please drop off 25 bags of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WheatFlourOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
@@ -272,7 +273,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 bags of {Ingredients:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WheatFlourOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -280,7 +281,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 bags of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WheatFlourOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -302,14 +303,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Oil": {
-          "Name": "Ingredients Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_BASE_FARMING_LEVEL current 8",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre doesn't have anymore at his store! Please drop off 25 bottles of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.OilOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
@@ -323,7 +325,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 bottles of {Ingredients:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.OilOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -331,7 +333,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 bottles of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.OilOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -353,14 +355,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Vinegar": {
-          "Name": "Ingredients Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted, season_spring",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_BASE_FARMING_LEVEL current 8",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre's doesn't have anymore!. Please drop off 25 bottles of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.OilOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
@@ -374,7 +377,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 bottles of {Ingredients:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.OilOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -382,7 +385,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 bottles of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.OilOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -404,14 +407,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Sugar": {
-          "Name": "Ingredients Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IngredientsOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted, season_fall",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm running out of {Ingredients:Text} at the Saloon and Pierre doesn't have anymore! Please drop off 25 bags of {Ingredients:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WheatFlourOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Ingredients",
@@ -425,7 +428,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 bags of {Ingredients:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WheatFlourOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Ingredients:Tags}"
@@ -433,7 +436,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 bags of {Ingredients:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WheatFlourOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -455,20 +458,20 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Eggs": {
-          "Name": "Eggs Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.EggsOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "BUILDINGS_CONSTRUCTED All Coop 1",
+          "Condition": "PLAYER_HAS_MAIL any AnyCoopBuilt",
           "SpecialRule": "",
-          "Text": "Requests for my special omelette are through the roof! Could you please bring two dozen eggs by the Saloon so that I can keep up with the demand?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggsOrder.text}}",
           "RandomizedElements": [],
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 24 Eggs",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggsOrder.collect.text}}",
               "RequiredCount": "24",
               "Data": {
                 "AcceptedContextTags": "egg_item"
@@ -476,7 +479,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 24 of any eggs in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggsOrder.ship.text}}",
               "RequiredCount": "24",
               "Data": {
           "DropBox": "GusFridge",
@@ -497,20 +500,20 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Milk": {
-          "Name": "Milk Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.MilkOrder.name}}",
           "Requester": "Gus",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "!dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "BUILDINGS_CONSTRUCTED All Barn 1",
+          "Condition": "PLAYER_HAS_MAIL any AnyBarnBuilt",
           "SpecialRule": "",
-          "Text": "My milk supplier has left town. Do you think you could provide enough milk for the Saloon? I need 25 bottles before two weeks are up.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MilkOrder.text}}",
           "RandomizedElements": [],
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 bottles of Milk",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MilkOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "milk_item"
@@ -518,7 +521,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 bottles of milk in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MilkOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -539,7 +542,7 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Alcohol": {
-          "Name": "Alcohol Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.AlcoholOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
@@ -547,7 +550,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "PLAYER_BASE_FARMING_LEVEL current 8",
           "SpecialRule": "",
-          "Text": "I'm running out of {Alcohol:Text} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 bottles of {Alcohol:Text} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AlcoholOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Alcohol",
@@ -561,7 +564,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Brew 25 {Alcohol:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AlcoholOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Alcohol:Tags}"
@@ -569,7 +572,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 25 {Alcohol:Text} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AlcoholOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
           "DropBox": "GusFridge",
@@ -591,14 +594,14 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Fruit": {
-          "Name": "Fruit Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.FruitOrder.name}}",
           "Requester": "Gus",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "!dropbox_GusFridge",
-          "Text": "I'm running out of {Fruit:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 10 {Fruit:TextPlural} quickly and I'll pay top dollar!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FruitOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Fruit",
@@ -621,7 +624,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Harvest 10 {Fruit:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FruitOrder.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "{Fruit:Tags}"
@@ -629,7 +632,7 @@
             },
             {
               "Type": "Donate",
-              "Text": "Place 10 {Fruit:TextPlural} in Gus' refrigerator in the Saloon",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FruitOrder.ship.text}}",
               "RequiredCount": "10",
               "Data": {
           "DropBox": "GusFridge",
@@ -651,14 +654,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Bait": {
-          "Name": "Willy's Bait",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.BaitOrder.name}}",
           "Requester": "Willy",
           "Duration": "ThreeDays",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition":"PLAYER_BASE_FISHING_LEVEL current 4",
           "SpecialRule": "",
-          "Text": "I need 25 pieces of {Bait:Text} for a fishin' trip I'm headin' out on in three days. Could bring me some before I leave?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.BaitOrder.text}}",
           "RandomizedElements": [
             {
               "Name": "Bait",
@@ -672,7 +676,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Craft 25 {Bait:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.BaitOrder.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Bait:Tags}"
@@ -680,7 +684,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 25 {Bait:Text} to Willy",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.BaitOrder.ship.text}}",
               "RequiredCount": "25",
               "Data": {
     "AcceptedContextTags": "{Bait:Tags}",
@@ -698,19 +702,19 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.CopperBars": {
-          "Name": "Clint's Crafting Bars",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsBars.name}}",
           "Requester": "Clint",
           "Duration": "Week",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "MINE_LOWEST_LEVEL_REACHED 1",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 1, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.IronBars, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.GoldBars",
           "SpecialRule": "",
-          "Text": "I've run out of Copper Bars and I have an order that I need to complete. Could you bring me 25 Copper Bars by the end of the week?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsCopperBars.text}}",
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 Copper Bars",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsCopperBars.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "color_copper, furnace_item, use_reverse_name_for_sorting"
@@ -718,7 +722,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 25 Copper Bars to Clint",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsCopperBars.ship.text}}",
               "RequiredCount": "25",
               "Data": {
     "AcceptedContextTags": "color_copper, furnace_item, use_reverse_name_for_sorting",
@@ -736,19 +740,19 @@
           ]
         },
          "blue704.Pelican_Town_Wholesale.IronBars": {
-          "Name": "Clint's Crafting Bars",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsBars.name}}",
           "Requester": "Clint",
           "Duration": "Week",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 40, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.CopperBars, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.GoldBars",
           "SpecialRule": "",
-          "Text": "I've run out of Iron Bars and I have an order that I need to complete. Could you bring me 25 Iron Bars by the end of the week?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsIronBars.text}}",
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 Iron Bars",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsIronBars.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "color_iron, furnace_item, use_reverse_name_for_sorting"
@@ -756,7 +760,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 25 Iron Bars to Clint",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsIronBars.ship.text}}",
               "RequiredCount": "25",
               "Data": {
     "AcceptedContextTags": "color_iron, furnace_item, use_reverse_name_for_sorting",
@@ -774,19 +778,19 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.GoldBars": {
-          "Name": "Clint's Crafting Bars",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsBars.name}}",
           "Requester": "Clint",
           "Duration": "Week",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "MINE_LOWEST_LEVEL_REACHED 80",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 80, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.IronBars, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.CopperBars",
           "SpecialRule": "",
-          "Text": "I've run out of Gold Bars and I have an order that I need to complete. Could you bring me 25 Gold Bars by the end of the week?",
+          "Text":"{{i18n:blue704.Pelican_Town_Wholesale.ClintsGoldBars.text}}",
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 Gold Bars",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsGoldBars.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "color_gold, furnace_item, use_reverse_name_for_sorting"
@@ -794,7 +798,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 25 Gold Bars to Clint",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.ClintsGoldBars.ship.text}}",
               "RequiredCount": "25",
               "Data": {
     "AcceptedContextTags": "color_gold, furnace_item, use_reverse_name_for_sorting",
@@ -812,7 +816,7 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.MaruOre": {
-          "Name": "Maru's Test",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.MaruOre.name}}",
           "Requester": "Maru",
           "Duration": "Week",
           "Repeatable": "True",
@@ -820,11 +824,11 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "LOCATION_ACCESSIBLE Desert",
           "SpecialRule": "",
-          "Text": "I've heard that Iridium Ore is nearly indestructible and I'd like to run a few tests on it. Please bring me 100 Iridium Ores by the end of the week.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MaruOre.text}}",
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 100 Iridium Ore",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MaruOre.collect.text}}",
               "RequiredCount": "100",
               "Data": {
                 "AcceptedContextTags": "color_iridium, ore_item, use_reverse_name_for_sorting"
@@ -832,7 +836,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 100 Iridium Ore to Maru",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MaruOre.ship.text}}",
               "RequiredCount": "100",
               "Data": {
     "AcceptedContextTags": "color_iridium, ore_item, use_reverse_name_for_sorting",
@@ -849,15 +853,53 @@
       }
           ]
         },
+        "blue704.Pelican_Town_Wholesale.EmilyCloth": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.EmilyCloth.name}}",
+          "Requester": "Emily",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "BUILDINGS_CONSTRUCTED All \"Deluxe Barn\"",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EmilyCloth.text}}",
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EmilyCloth.collect.text}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "cloth_item"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EmilyCloth.ship.text}}",
+              "RequiredCount": "15",
+              "Data": {
+    "AcceptedContextTags": "cloth_item",
+    "TargetName": "Emily"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 15000
+        }
+      }
+          ]
+        },
         "blue704.Pelican_Town_Wholesale.DemetriusForage": {
-          "Name": "Demetrius' Research",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.name}}",
           "Requester": "Demetrius",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "SpecialRule": "",
-          "Text": "I'm writing a paper about the local flora of the Valley, but I need some specimens for closer study. Please bring me 5 {Forage:TextPlural} when you can.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.text}}",
           "RandomizedElements": [
             {
               "Name": "Forage",
@@ -884,7 +926,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 5 {Forage:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.collect.text}}",
               "RequiredCount": "5",
               "Data": {
                 "AcceptedContextTags": "{Forage:Tags}"
@@ -892,7 +934,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 5 {Forage:Text} to Demetrius",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.DemetriusForage.ship.text}}",
               "RequiredCount": "5",
               "Data": {
                 "AcceptedContextTags": "{Forage:Tags}",
@@ -911,19 +953,20 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Minerals": {
-          "Name": "Minerals Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Minerals.name}}",
           "Requester": "Gunther",
-          "Duration": "Month",
+          "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_STAT current GeodesCracked 10",
           "SpecialRule": "",
-          "Text": "The local geology society would like to put on a showcase of local minerals and have asked me to furnish them. Could you ship any 10 minerals that you have to fulfill their order?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Minerals.text}}",
           "RandomizedElements": null,
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 10 Minerals",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Minerals.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "category_minerals"
@@ -931,7 +974,7 @@
             },
             {
               "Type": "Ship",
-              "Text": "Ship 10 Minerals",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Minerals.ship.text}}",
               "RequiredCount": "10",
               "Data": {
     "AcceptedContextTags": "category_minerals"
@@ -947,20 +990,59 @@
       }
           ]
         },
+        "blue704.Pelican_Town_Wholesale.Gems": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Gems.name}}",
+          "Requester": "Gunther",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition":"MINE_LOWEST_LEVEL_REACHED 40",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Gems.text}}",
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Gems.collect.text}}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "category_gem"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Gems.ship.text}}",
+              "RequiredCount": "10",
+              "Data": {
+    "AcceptedContextTags": "category_gem"
+}
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
         "blue704.Pelican_Town_Wholesale.Bones": {
-          "Name": "Fossils Special Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.name}}",
           "Requester": "Gunther",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition":"MINE_LOWEST_LEVEL_REACHED 40",
           "SpecialRule": "",
-          "Text": "The local paleontology society would like to put on a showcase of local fossils and have asked me to furnish them. Could you ship any 10 fossils that you have to fulfill their order?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.text}}",
           "RandomizedElements": null,
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 10 Fossils",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.collect.text}}",
               "RequiredCount": "10",
               "Data": {
                 "AcceptedContextTags": "prehistoric_item/fossil_item/bone_item"
@@ -968,7 +1050,7 @@
             },
             {
               "Type": "Ship",
-              "Text": "Ship 10 Fossils",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.ship.text}}",
               "RequiredCount": "10",
               "Data": {
     "AcceptedContextTags": "prehistoric_item/fossil_item/bone_item"
@@ -985,7 +1067,7 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.StoreProducts": {
-          "Name": "Artisan Goods Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.StoreProducts.name}}",
           "Requester": "Pierre",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
@@ -993,7 +1075,7 @@
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
           "Condition": "PLAYER_BASE_FARMING_LEVEL current 4",
           "SpecialRule": "",
-          "Text": "The store is running low on {Goods:Text}. Please bring me 25 jars of {Goods:Text} as soon as you can. Thanks!",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.StoreProducts.text}}",
           "RandomizedElements": [
             {
               "Name": "Goods",
@@ -1007,7 +1089,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 25 {Goods:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.StoreProducts.collect.text}}",
               "RequiredCount": "25",
               "Data": {
                 "AcceptedContextTags": "{Goods:Tags}"
@@ -1015,7 +1097,7 @@
             },
             {
         "Type": "Donate",
-        "Text": "Bring 25 {Goods:Text} to the store and drop them off in the box.",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.StoreProducts.ship.text}}",
         "RequiredCount": "25",
         "Data": {
           "DropBox": "PierreBox",
@@ -1036,15 +1118,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.MonsterParts": {
-          "Name": "Monster Parts Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.name}}",
           "Requester": "Wizard",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "MINE_LOWEST_LEVEL_REACHED 1",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 1, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.MonsterParts2, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.MonsterParts3",
           "SpecialRule": "",
-          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me 50 pieces {Parts:Text}.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.text}}",
           "RandomizedElements": [
             {
               "Name": "Parts",
@@ -1058,7 +1140,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 50 {Parts:Text}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.collect.text}}",
               "RequiredCount": "50",
               "Data": {
                 "AcceptedContextTags": "{Parts:Tags}"
@@ -1066,7 +1148,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 50 {Parts:Text} to the Wizard",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.ship.text}}",
               "RequiredCount": "50",
               "Data": {
     "AcceptedContextTags": "{Parts:Tags}",
@@ -1084,15 +1166,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.MonsterParts2": {
-          "Name": "Monster Parts Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.name}}",
           "Requester": "Wizard",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 40,!PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.MonsterParts, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.MonsterParts3",
           "SpecialRule": "",
-          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me 50 {Parts:TextPlural}.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.text}}",
           "RandomizedElements": [
             {
               "Name": "Parts",
@@ -1106,7 +1188,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 50 {Parts:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.collect.text}}",
               "RequiredCount": "50",
               "Data": {
                 "AcceptedContextTags": "{Parts:Tags}"
@@ -1114,7 +1196,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 50 {Parts:TextPlural} to the Wizard",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.ship.text}}",
               "RequiredCount": "50",
               "Data": {
     "AcceptedContextTags": "{Parts:Tags}",
@@ -1132,15 +1214,15 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.MonsterParts3": {
-          "Name": "Monster Parts Order",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.name}}",
           "Requester": "Wizard",
           "Duration": "TwoWeeks",
           "Repeatable": "True",
           "RequiredTags": "mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "MINE_LOWEST_LEVEL_REACHED 80",
+          "Condition": "MINE_LOWEST_LEVEL_REACHED 80,!PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.MonsterParts2, !PLAYER_SPECIAL_ORDER_ACTIVE current blue704.Pelican_Town_Wholesale.MonsterParts",
           "SpecialRule": "",
-          "Text": "I am in need of quality monster parts. I have heard that you are unafraid to delve into the mines so therefore I am requesting that you to bring me 50 {Parts:TextPlural}.",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.text}}",
           "RandomizedElements": [
             {
               "Name": "Parts",
@@ -1154,7 +1236,7 @@
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 50 {Parts:TextPlural}",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.collect.text}}",
               "RequiredCount": "50",
               "Data": {
                 "AcceptedContextTags": "{Parts:Tags}"
@@ -1162,7 +1244,7 @@
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 50 {Parts:TextPlural} to the Wizard",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.ship.text}}",
               "RequiredCount": "50",
               "Data": {
     "AcceptedContextTags": "{Parts:Tags}",
@@ -1180,28 +1262,28 @@
           ]
         },
         "blue704.Pelican_Town_Wholesale.Hay": {
-          "Name": "Hay Needed!",
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Hay.name}}",
           "Requester": "Marnie",
           "Duration": "Month",
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !season_spring, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
-          "Condition": "",
+          "Condition": "BUILDINGS_CONSTRUCTED All Silo",
           "SpecialRule": "",
-          "Text": "I have a customer that needs a large order of Hay delivered this month and I need some help. Could you bring me 250 pieces?",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Hay.text}}",
           "RandomizedElements": [],
           "Objectives": [
             {
               "Type": "Collect",
-              "Text": "Collect 250 pieces of Hay",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Hay.collect.text}}",
               "RequiredCount": "250",
               "Data": {
-                "AcceptedContextTags": "color_yellow"
+                "AcceptedContextTags": "color_yellow, hay_item"
               }
             },
             {
               "Type": "Deliver",
-              "Text": "Bring 250 pieces of Hay to Marnie",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Hay.ship.text}}",
               "RequiredCount": "250",
               "Data": {
     "AcceptedContextTags": "color_yellow, hay_item",
@@ -1217,8 +1299,1577 @@
         }
       }
           ]
+        },
+        //Festival Orders
+        "blue704.Pelican_Town_Wholesale.EggFest1": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest.name}}",
+          "Requester": "Lewis",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest1.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest1.collect.text}}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "egg_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest1.ship.text}}",
+              "RequiredCount": "25",
+              "Data": {
+          "AcceptedContextTags": "egg_item"
         }
-    }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.EggFest2": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest.name}}",
+          "Requester": "Lewis",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest2.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest2.collect.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "egg_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest2.ship.text}}",
+              "RequiredCount": "100",
+              "Data": {
+          "AcceptedContextTags": "egg_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      },
+      {
+          "Type": "Mail",
+    "Data": {
+    "MailReceived": "EggFest2OrderComplete",
+    "NoLetter": "false"
+}
+        }
+          ]
+    },
+    "blue704.Pelican_Town_Wholesale.EggFest3": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest.name}}",
+          "Requester": "Lewis",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest2.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest2.collect.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "egg_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.EggFest2.ship.text}}",
+              "RequiredCount": "100",
+              "Data": {
+          "AcceptedContextTags": "egg_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 15000
+        }
+      },
+      {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Alex"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Elliott"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Harvey"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Sam"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Sebastian"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Shane"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Abigail"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Emily"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Haley"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Leah"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Maru"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Penny"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Caroline"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Clint"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Demetrius"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Dwarf"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Evelyn"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "George"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Gus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Jas"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Jodi"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Kent"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Krobus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Leo"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Lewis"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Linus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Marnie"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Pam"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Pierre"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Robin"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Sandy"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Willy"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Wizard"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Vincent"
+}
+        }
+          ]
+    },
+    "blue704.Pelican_Town_Wholesale.FlowerDance1": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance1.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance1.collect.text}}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "flower_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance1.ship.text}}",
+              "RequiredCount": "25",
+              "Data": {
+          "AcceptedContextTags": "flower_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.FlowerDance2": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance2.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance2.collect.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "flower_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance2.ship.text}}",
+              "RequiredCount": "100",
+              "Data": {
+          "AcceptedContextTags": "flower_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      },
+      {
+          "Type": "Mail",
+    "Data": {
+    "MailReceived": "FlowerDance2OrderComplete",
+    "NoLetter": "false"
+}
+        }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.FlowerDance3": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance2.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance2.collect.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "flower_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.FlowerDance2.ship.text}}",
+              "RequiredCount": "100",
+              "Data": {
+          "AcceptedContextTags": "flower_item"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 15000
+        }
+      },
+      {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Alex"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Elliott"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Harvey"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Sam"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Sebastian"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Shane"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Abigail"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Emily"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Haley"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Leah"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Maru"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Penny"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Caroline"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Clint"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Demetrius"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Dwarf"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Evelyn"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "George"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Gus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Jas"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Jodi"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Kent"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Krobus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Leo"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Lewis"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Linus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Marnie"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Pam"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Pierre"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Robin"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Sandy"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Willy"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Wizard"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "150",
+    "TargetName": "Vincent"
+}
+        }
+          ]
+    },
+    "blue704.Pelican_Town_Wholesale.Luau1": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Luau.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "CropSpring",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Parsnip, Carrot, Kale"
+          }
+        ]
+        },
+        {
+              "Name": "CropSummer",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Hot Pepper, Tomato, Radish"
+          }
+        ]
+        }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.collect.text0}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{CropSpring:Tags}"
+              }
+            },
+             {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.collect.text1}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{CropSummer:Tags}"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.collect.text2}}",
+              "RequiredCount": "150",
+              "Data": {
+                "AcceptedContextTags": "wood_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.ship.text0}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{CropSpring:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.ship.text1}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{CropSummer:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau1.ship.text2}}",
+              "RequiredCount": "150",
+              "Data": {
+                "AcceptedContextTags": "wood_item"
+              }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.Luau2": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Luau.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "CropSpring",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Parsnip, Carrot, Kale"
+          }
+        ]
+        },
+        {
+              "Name": "Crop2Spring",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Potato, Green Bean, Garlic"
+          }
+        ]
+        },
+        {
+              "Name": "CropSummer",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Hot Pepper, Tomato, Radish"
+          }
+        ]
+        },
+        {
+              "Name": "Crop2Summer",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Red Cabbage, Summer Squash"
+          }
+        ]
+        },
+        {
+              "Name": "Bottles",
+              "Values": [
+          {
+            "Value": "PICK_ITEM Oil, Vinegar"
+          }
+        ]
+        }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.collect.text0}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "{CropSpring:Tags}"
+              }
+            },
+             {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.collect.text1}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "{CropSummer:Tags}"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.collect.text2}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{Crop2Spring:Tags}"
+              }
+            },
+             {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.collect.text3}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{Crop2Summer:Tags}"
+              }
+            },
+             {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.collect.textbottles}}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Bottles:Tags}"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.collect.text4}}",
+              "RequiredCount": "300",
+              "Data": {
+                "AcceptedContextTags": "wood_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.ship.text0}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "{CropSpring:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.ship.text1}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "{CropSummer:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.ship.text2}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{Crop2Spring:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.ship.text3}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{Crop2Summer:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.ship.textbottles}}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "{Bottles:Tags}"
+              }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Luau2.ship.text4}}",
+              "RequiredCount": "300",
+              "Data": {
+                "AcceptedContextTags": "wood_item"
+              }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 15000
+        }
+      },
+      {
+      "Type": "Object",
+        "Data": {
+          "Item": "PurpleBook",
+          "Amount": "1"
+                }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.MoonlightJellies": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.MoonlightJellies.name}}",
+          "Requester": "Lewis",
+          "Duration": "OneDay",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MoonlightJellies.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MoonlightJellies.collect.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "torch_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MoonlightJellies.ship.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "torch_item"
+              }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 5000
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SVFair": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.collect.text0}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "color_purple, dye_medium, season_fall"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.collect.text1}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "color_brown, food_bakery"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.collect.text2}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "color_brown, forage_item, forage_item_mines, season_all"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.ship.text0}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "color_purple, dye_medium, season_fall"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.ship.text1}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "color_brown, food_bakery"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SVFair.ship.text2}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "color_brown, forage_item, forage_item_mines, season_all"
+              }
+            }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 15000
+        }
+      },
+      {
+          "Type": "Mail",
+    "Data": {
+    "MailReceived": "SVFairOrderComplete",
+    "NoLetter": "false"
+}
+        }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SpiritsEvePumpkins": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Pumpkins.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Pumpkins.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Pumpkins.collect.text}}",
+              "RequiredCount": "100",
+              "Data": {
+                "AcceptedContextTags": "color_orange, dye_medium, season_fall"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Pumpkins.ship.text}}",
+              "RequiredCount": "100",
+              "Data": {
+          "AcceptedContextTags": "color_orange, dye_medium, season_fall"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 10000
+        }
+      },
+      {
+        "Type": "Mail",
+          "Data": {
+          "MailReceived": "SpiritsEvePumpkinsComplete",
+          "NoLetter": "false"
+}
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.SpiritsEveMonsters": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.Monsters.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "[blue704.Pelican_Town_Wholesale.Monsters.text]",
+          "RandomizedElements": [
+            {
+              "Name": "Monster",
+              "Values": [
+          {
+            "RequiredTags": "",
+            "Value": "Target|Bat|LocalizedName|[Clint_RE_Monster_0_LocalizedName]"
+          },
+          {
+            "RequiredTags": "",
+            "Value": "Target|Dust Spirit|LocalizedName|[Clint_RE_Monster_1_LocalizedName]"
+          },
+          {
+            "RequiredTags": "",
+            "Value": "Target|Skeleton|LocalizedName|[Clint_RE_Monster_2_LocalizedName]"
+          },
+          {
+            "RequiredTags": "",
+            "Value": "Target|Grub|LocalizedName|[Clint_RE_Monster_3_LocalizedName]"
+          },
+          {
+            "RequiredTags": "",
+            "Value": "Target|Bug|LocalizedName|[SpiritsEveMonster0]"
+          },
+          {
+            "RequiredTags": "",
+            "Value": "Target|Shadow Brute|LocalizedName|[SpiritsEveMonster2]"
+          }
+        ]
+        }
+          ],
+          "Objectives": [
+            {
+              "Type": "Slay",
+                "Text": "[blue704.Pelican_Town_Wholesale.Monsters.collect.text]",
+                "RequiredCount": "50",
+                "Data": {
+                  "TargetName": "{Monster:Target}",
+                  "IgnoreFarmMonsters": "true"
+}
+            }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 10000
+        }
+      },
+      {
+        "Type": "Mail",
+          "Data": {
+          "MailReceived": "SpiritsEveMonstersComplete",
+          "NoLetter": "false"
+}
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.IceFest": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.name}}",
+          "Requester": "Lewis",
+          "Duration": "Week",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.collect.text0}}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "color_orange, dye_medium, season_spring"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.collect.text1}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "coal_item"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.collect.text2}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "wood_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.ship.text0}}",
+              "RequiredCount": "10",
+              "Data": {
+          "AcceptedContextTags": "color_orange, dye_medium, season_spring"
+        }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.ship.text1}}",
+              "RequiredCount": "50",
+              "Data": {
+                "AcceptedContextTags": "coal_item"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.IceFest.ship.text2}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "wood_item"
+              }
+            }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 7500
+        }
+      }
+          ]
+        },
+        "blue704.Pelican_Town_Wholesale.WinterStar": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WinterStar.name}}",
+          "Requester": "Lewis",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current blahblahblahfakeevent",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WinterStar.text}}",
+          "RandomizedElements": [],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WinterStar.collect.text0}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "milk_item"
+              }
+            },
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WinterStar.collect.text1}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "color_brown, food_bakery, food_sweet"
+              }
+            },
+            {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WinterStar.ship.text0}}",
+              "RequiredCount": "20",
+              "Data": {
+          "AcceptedContextTags": "milk_item"
+        }
+      },
+      {
+              "Type": "Ship",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WinterStar.ship.text1}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "color_brown, food_bakery, food_sweet"
+              }
+            }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": 10000
+        }
+      },
+      {
+        "Type": "Mail",
+          "Data": {
+          "MailReceived": "WinterStarComplete",
+          "NoLetter": "false"
+}
+      },
+      {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Alex"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Elliott"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Harvey"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Sam"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Sebastian"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Shane"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Abigail"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Emily"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Haley"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Leah"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Maru"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Penny"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Caroline"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Clint"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Demetrius"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Dwarf"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Evelyn"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "George"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Gus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Jas"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Jodi"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Kent"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Krobus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Leo"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Lewis"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Linus"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Marnie"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Pam"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Pierre"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Robin"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Sandy"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Willy"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Wizard"
+}
+        },
+        {
+          "Type": "Friendship",
+"Data": {
+    "Amount": "250",
+    "TargetName": "Vincent"
+}
+        }
+          ]
+        }
+  }
 }
   ]
 }

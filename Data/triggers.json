@@ -11,6 +11,113 @@
           "Actions": [
             "AddMail current WholesaleStoreMapPatch received"
           ]
+        },
+        "EggFestOrderEventReset": {
+          "Id": "EggFestOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current EggFestOrderEvent",
+          "Actions": [
+            "MarkEventSeen current EggFestOrderEvent false",
+            "MarkActionApplied current EggFestOrderEventReset false"
+          ]
+        },
+        "EggFestOrderEventReset2": {
+          "Id": "EggFestOrderEventReset2",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current EggFestOrderEvent2",
+          "Actions": [
+            "MarkEventSeen current EggFestOrderEvent2 false",
+            "MarkActionApplied current EggFestOrderEventReset2 false"
+          ]
+        },
+        "FlowerDanceOrderEventReset": {
+          "Id": "FlowerDanceOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current FlowerDanceOrderEvent",
+          "Actions": [
+            "MarkEventSeen current FlowerDanceOrderEvent false",
+            "MarkActionApplied current FlowerDanceOrderEventReset false"
+          ]
+        },
+        "FlowerDanceOrderEventReset2": {
+          "Id": "FlowerDanceOrderEventReset2",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current FlowerDanceOrderEvent2",
+          "Actions": [
+            "MarkEventSeen current FlowerDanceOrderEvent2 false",
+            "MarkActionApplied current FlowerDanceOrderEventReset2 false"
+          ]
+        },
+        "LuauOrderEventReset": {
+          "Id": "LuauOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current LuauOrderEvent",
+          "Actions": [
+            "MarkEventSeen current LuauOrderEvent false",
+            "MarkActionApplied current LuauOrderEventReset false"
+          ]
+        },
+        "MoonlightJelliesOrderEventReset": {
+          "Id": "MoonlightJellilesOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current MoonlightJelliesOrderEvent",
+          "Actions": [
+            "MarkEventSeen current MoonlightJelliesOrderEvent false",
+            "MarkActionApplied current MoonlightJelliesOrderEventReset false"
+          ]
+        },
+        "SVFairOrderEventReset": {
+          "Id": "SVFairOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current SVFairOrderEvent",
+          "Actions": [
+            "MarkEventSeen current SVFairOrderEvent false",
+            "MarkActionApplied current SVFairOrderEventReset false"
+          ]
+        },
+        "SpiritsEveOrderEventReset": {
+          "Id": "SpiritsEveOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current SpiritsEveOrderEvent",
+          "Actions": [
+            "MarkEventSeen current SpiritsEveOrderEvent false",
+            "MarkActionApplied current SpiritsEveOrderEventReset false"
+          ]
+        },
+        "IceFestOrderEventReset": {
+          "Id": "IceFestOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current IceFestOrderEvent",
+          "Actions": [
+            "MarkEventSeen current IceFestOrderEvent false",
+            "MarkActionApplied current IceFestOrderEventReset false"
+          ]
+        },
+        "WinterStarOrderEventReset": {
+          "Id": "WinterStarOrderEventReset",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_SEEN_EVENT current WinterStarOrderEvent",
+          "Actions": [
+            "MarkEventSeen current WinterStarOrderEvent false",
+            "MarkActionApplied current WinterStarOrderEventReset false"
+          ]
+        },
+        //GSQ Letters
+        "AnyBarnBuilt": {
+          "Id": "AnyBarnBuilt",
+          "Trigger": "DayEnding",
+          "Condition": "BUILDINGS_CONSTRUCTED All Barn 1",
+          "Actions": [
+            "AddMail current AnyBarnBuilt received"
+          ]
+        },
+         "AnyCoopBuilt": {
+          "Id": "AnyCoopBuilt",
+          "Trigger": "DayEnding",
+          "Condition": "BUILDINGS_CONSTRUCTED All Coop 1",
+          "Actions": [
+            "AddMail current AnyCoopBuilt received"
+          ]
         }
           }
           }
