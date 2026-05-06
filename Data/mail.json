@@ -1,0 +1,52 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "LogName": "Egg Fest 2 Mail Data",
+      "Target": "Data/Mail",
+      "Entries": {
+        "EggFest2OrderComplete": "{{i18n:EggFest2OrderComplete.text}}%item id (BC)254 1%%-Lewis %item id (O)289 1%%[letterbg 0][#]{{i18n:EggFest2OrderComplete.title}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "LogName": "Flower Dance 2 Mail Data",
+      "Target": "Data/Mail",
+      "Entries": {
+        "FlowerDance2OrderComplete": "{{i18n:FlowerDance2OrderComplete.text}}%item id (F)1971 1%%-Lewis[letterbg 0][#]{{i18n:FlowerDance2OrderComplete.title}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "LogName": "SVFair Mail Data",
+      "Target": "Data/Mail",
+      "Entries": {
+        "SVFairOrderComplete": "{{i18n:SVFairOrderComplete.text}}%item id (O)917 10%%-Gus[letterbg 0][#]{{i18n:SVFairOrderComplete.title}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "LogName": "Spirit's Eve Pumpkins Mail Data",
+      "Target": "Data/Mail",
+      "Entries": {
+        "SpiritsEvePumpkinsComplete": "{{i18n:SpiritsEvePumpkinsComplete.text}}%item id (BC)110 1 (BC)126 1 (BC)138 1 (BC)167 1%%-Lewis[letterbg 0][#]{{i18n:SpiritsEvePumpkinsComplete.title}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "LogName": "Spirit's Eve Monsters Mail Data",
+      "Target": "Data/Mail",
+      "Entries": {
+        "SpiritsEveMonstersComplete": "{{i18n:SpiritsEveMonstersComplete.text}}%item id (W)54 1 (W)56 1 (W)55 1%%-Marlon[letterbg 0][#]{{i18n:SpiritsEveMonstersComplete.title}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "LogName": "Milk and Cookies Mail Data",
+      "Target": "Data/Mail",
+      "Entries": {
+        "WinterStarComplete": "{{i18n:WinterStarComplete.text}}%item id (O)GoldenMysteryBox 10%%-Lewis[letterbg 0][#]{{i18n:WinterStarComplete.title}}"
+      }
+    }
+    ]
+}
