@@ -135,6 +135,11 @@
 "config.Board Appearance and Location.values.Order Stand": "Order Stand",
 "config.Board Appearance and Location.values.Seven Deadly Sins Compatibility": "Seven Deadly Sins Compatibility",
 "config.section.Appearance and Map Compatibility.name": "Appearance and Map Compatibility",
+"config.Enable Regular Special Orders.name": "Enable Regular Special Orders",
+"config.Enable Regular Special Orders.description": "Select true to enable all regular orders accessible throught the Order Board/Stand.",
+"config.Enable Festival Orders.name": "Enable Festival Orders",
+"config.Enable Festival Orders.description": "Select true to enable all Festival Orders.",
+"config.section.Enable or Disable Orders.name": "Enable or Disable Orders",
 //Vanilla Orders
 "blue704.Pelican_Town_Wholesale.CropSpecialOrder.name": "Crop Special Order",
 "blue704.Pelican_Town_Wholesale.CropSpecialOrder.text": "I'm running out of {Crops:TextPlural} at the Saloon and it won't be long before I won't have enough for the dinner rush. Please drop off 25 {Crops:TextPlural} quickly and I'll pay top dollar!",
