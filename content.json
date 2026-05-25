@@ -10,7 +10,7 @@
             "AllowValues": "true, false",
             "Default": "true",
             "Section": "Enable or Disable Orders",
-            "Description": "Select true to enable all regular orders accessible throught the Order Board/Stand."
+            "Description": "Select true to enable all regular orders accessible through the Order Board/Stand."
         },
         "Enable Festival Orders": {
             "AllowValues": "true, false",
