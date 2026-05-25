@@ -5,7 +5,19 @@
       "AllowValues": "Order Board, Order Stand, Seven Deadly Sins Compatibility",
       "Default": "Order Board",
       "Section": "Appearance and Map Compatibility"
-    }
+    },
+    "Enable Regular Special Orders": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Enable or Disable Orders",
+            "Description": "Select true to enable all regular orders accessible throught the Order Board/Stand."
+        },
+        "Enable Festival Orders": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Enable or Disable Orders",
+            "Description": "Select true to enable all Festival Orders."
+        }
   },
   "Changes": [
     {
@@ -46,7 +58,8 @@
       "Action": "Include",
       "FromFile": "Data/mappatchesboard.json",
       "When": {
-        "Board Appearance and Location": "Order Board"
+        "Board Appearance and Location": "Order Board",
+        "Enable Regular Special Orders": "true"
       }
     },
     {
@@ -54,7 +67,8 @@
       "Action": "Include",
       "FromFile": "Data/mappatchesstand.json",
       "When": {
-        "Board Appearance and Location": "Order Stand"
+        "Board Appearance and Location": "Order Stand",
+        "Enable Regular Special Orders": "true"
       }
     },
     {
@@ -62,7 +76,8 @@
       "Action": "Include",
       "FromFile": "Data/mappatchesSDS.json",
       "When": {
-        "Board Appearance and Location": "Seven Deadly Sins Compatibility"
+        "Board Appearance and Location": "Seven Deadly Sins Compatibility",
+        "Enable Regular Special Orders": "true"
       }
     }
 ]
