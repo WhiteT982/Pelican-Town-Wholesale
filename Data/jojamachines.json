@@ -3,6 +3,9 @@
     {
       "Action": "EditData",
       "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true"
+      },
       "Entries": {
         "blue704.Pelican_Town_Wholesale.JojaGoods": {
           "Name": "{{i18n:blue704.Pelican_Town_Wholesale.JojaGoods.name}}",
@@ -11,6 +14,7 @@
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "!IS_COMMUNITY_CENTER_COMPLETE",
           "SpecialRule": "",
           "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaGoods.text}}",
           "RandomizedElements": [
@@ -62,6 +66,7 @@
           "Repeatable": "True",
           "RequiredTags": "!season_winter, !dropbox_JojaPROorder, mail_FirstParsnipQuestCompleted",
           "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "!IS_COMMUNITY_CENTER_COMPLETE",
           "SpecialRule": "",
           "Text": "{{i18n:blue704.Pelican_Town_Wholesale.JojaAlcohol.text}}",
           "RandomizedElements": [

@@ -3,6 +3,9 @@
     {
       "Action": "EditData",
       "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true"
+      },
       "Entries": {
         "blue704.Pelican_Town_Wholesale.AndyFertilizer": {
           "Name": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.name}}",
