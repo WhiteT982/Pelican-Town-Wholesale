@@ -2054,7 +2054,7 @@
               "Name": "CropSummer",
               "Values": [
           {
-            "Value": "PICK_ITEM Hot Pepper, Tomato, Radish"
+            "Value": "PICK_ITEM Hot Pepper, Poppy, Radish"
           }
         ]
         }
@@ -2149,7 +2149,7 @@
               "Name": "CropSummer",
               "Values": [
           {
-            "Value": "PICK_ITEM Hot Pepper, Tomato, Radish"
+            "Value": "PICK_ITEM Hot Pepper, Poppy, Radish"
           }
         ]
         },
@@ -2157,7 +2157,7 @@
               "Name": "Crop2Summer",
               "Values": [
           {
-            "Value": "PICK_ITEM Red Cabbage, Summer Squash"
+            "Value": "PICK_ITEM Tomato, Summer Squash"
           }
         ]
         },
