@@ -20,9 +20,31 @@
       "Action": "EditMap",
       "Target": "Maps/Town",
       "When": {
-          "HasFlag": "WholesaleStoreMapPatch"
+          "HasFlag": "WholesaleStoreMapPatch",
+          "Season": "spring, summer,fall"
       },
       "FromFile": "assets/z_wholesaleshop.tmx",
+      "FromArea": {
+        "X": 8,
+        "Y": 55,
+        "Width": 4,
+        "Height": 5
+      },
+      "ToArea": {
+        "X": 8,
+        "Y": 55,
+        "Width": 4,
+        "Height": 5
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "When": {
+          "HasFlag": "WholesaleStoreMapPatch",
+          "Season": "winter"
+      },
+      "FromFile": "assets/z_wholesaleshopwinter.tmx",
       "FromArea": {
         "X": 8,
         "Y": 55,
