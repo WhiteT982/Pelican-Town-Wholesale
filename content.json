@@ -17,8 +17,74 @@
             "Default": "true",
             "Section": "Enable or Disable Orders",
             "Description": "Select true to enable all Festival Orders."
-        }
+        },
+        "Enable Advanced Crafting": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options",
+            "Description": "Select true to allow advanced WAG crafting items to be used in special orders."
+        },
+        "Enable Wild Food": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
   },
+        "Enable Cakes": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Muffins": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Cupcakes": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Tarts": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Cookies": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Doughnuts": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Pudding": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Ales": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Coffees": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Teas": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  },
+        "Enable Chocolates": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Wildflour Atelier Goods Options"
+  }
+},
   "Changes": [
     {
       "Action": "Include",
@@ -52,6 +118,13 @@
       },
       "Action": "Include",
       "FromFile": "Data/CornucopiaExtended.json"
+    },
+    {
+      "When": {
+        "HasMod": "Wildflour.AtelierGoods"
+      },
+      "Action": "Include",
+      "FromFile": "Data/WAGbaker.json, Data/WAGale.json, Data/WAGcoffee.json, Data/WAGtea.json, Data/WAGchocolate.json"
     },
     {
       "LogName": "Change to Board",

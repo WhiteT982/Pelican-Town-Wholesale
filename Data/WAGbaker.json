@@ -1,0 +1,957 @@
+{
+  "Changes": [
+    //Wild Food
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Wild Food": "true"
+      },
+      "Entries": {
+        "blue704.Pelican_Town_Wholesale.WAGspices": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGspices.name}}",
+          "Requester": "Gus",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!season_winter, !dropbox_GusFridge, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGspices.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGspice",
+              "Values": [
+          {
+            "RequiredTags": "season_spring",
+            "Value": "PICK_ITEM Wildflour.AtelierGoods_Cilantro, Wildflour.AtelierGoods_Rosemary, Wildflour.AtelierGoods_Thyme, "
+          },
+          {
+            "RequiredTags": "season_summer",
+            "Value": "PICK_ITEM Wildflour.AtelierGoods_Vanilla, Wildflour.AtelierGoods_Mint, Wildflour.AtelierGoods_Basil"
+          },
+          {
+            "RequiredTags": "season_fall",
+            "Value": "PICK_ITEM Wildflour.AtelierGoods_Sage, Wildflour.AtelierGoods_Rosemary"
+          }
+        ]
+      }
+    ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGspices.collect.text}}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "{WAGspice:Tags}"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGspices.ship.text}}",
+              "RequiredCount": "25",
+              "Data": {
+          "DropBox": "GusFridge",
+          "DropBoxGameLocation": "Saloon",
+          "DropBoxIndicatorLocation": "18 15",
+          "MinimumCapacity": "30",
+          "AcceptedContextTags": "{WAGspice:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGspice:Price}",
+          "Multiplier": "50"
+        }
+      }
+          ]
+        }
+    }
+},
+//Cakes
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Cakes": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGbaker": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGcake",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Apple_Cake, Wildflour.AtelierGoods_Citrus_Thyme_Cake, Wildflour.AtelierGoods_Raspberry_Chamomile_Cake, Wildflour.AtelierGoods_Peach_Cake, Wildflour.AtelierGoods_Spiced_Cake, Wildflour.AtelierGoods_Tropical_Floral_Cake, Wildflour.AtelierGoods_Almond_Elderflower_Cake, Wildflour.AtelierGoods_Victoria_Sponge_Cake, Wildflour.AtelierGoods_Pink_Velvet_Cake, Wildflour.AtelierGoods_Summer_Flower_Cake, Wildflour.AtelierGoods_Chocolate_Mudslide_Cake"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcake:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGcake:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGcake:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Cakes": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGbaker": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGcake",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Cake"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcake:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGbaker.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGcake:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGcake:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+//Muffins
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Muffins": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGmuffins": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGmuffins",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Blueberry_Muffins, Wildflour.AtelierGoods_Poppyseed_Muffins, Wildflour.AtelierGoods_Walnut_Muffins, Wildflour.AtelierGoods_Pistachio_Muffins, Wildflour.AtelierGoods_Coffee_Cake_Muffins"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGmuffins:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGmuffins:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGmuffins:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Muffins": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGmuffins": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGmuffins",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Muffins"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGmuffins:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGmuffins.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGmuffins:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGmuffins:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+//Cupcakes
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Cupcakes": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGcc": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGcc",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Strawberry_Cupcakes, Wildflour.AtelierGoods_Vanilla_Cupcakes, Wildflour.AtelierGoods_Chocolate_Cupcakes, Wildflour.AtelierGoods_Neapolitan_Cupcakes, Wildflour.AtelierGoods_Matcha_Cupcakes, Wildflour.AtelierGoods_Chocolate_Mint_Cupcakes, Wildflour.AtelierGoods_Tropical_Cupcakes"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcc:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGcc:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGcc:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Cupcakes": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGcc": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGcc",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Cupcakes"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcc:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcc.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGcc:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGcc:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+//Tarts
+{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Tarts": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGtarts": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGtarts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Blueberry_Tart, Wildflour.AtelierGoods_Chocolate_Hazelnut_Tart, Wildflour.AtelierGoods_Orange_Dandelion_Tart, Wildflour.AtelierGoods_Raspberry_Pistachio_Tart, Wildflour.AtelierGoods_Starfruit_Tart, Wildflour.AtelierGoods_Mojito_Tart, Wildflour.AtelierGoods_Mango_Pineapple_Tart"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGtarts:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGtarts:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGtarts:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Tarts": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGtarts": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGtarts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Tart"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGtarts:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGtarts.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGtarts:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGtarts:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+//Cookies
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Cookies": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGcookies": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGcookies",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Vanilla_Heart_Cookies, Wildflour.AtelierGoods_Cherry_Thumbprint_Cookies, Wildflour.AtelierGoods_Cheesecake_Thumbprint_Cookies, Wildflour.AtelierGoods_Assorted_Cookies, Wildflour.AtelierGoods_Magic_Thumbprint_Cookies, Wildflour.AtelierGoods_Chocolate_Thumbprint_Cookies, Wildflour.AtelierGoods_Lemon_Cookies, Wildflour.AtelierGoods_Strawberry_Heart_Cookies, Wildflour.AtelierGoods_Rose_Cookies, Wildflour.AtelierGoods_Honey_Lavender_Cookies"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcookies:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGcookies:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGcookies:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Cookies": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGcookies": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGcookies",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Cookies"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcookies:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGcookies.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGcookies:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGcookies:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+//Doughnuts
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Doughnuts": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGdoughnuts": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGdoughnuts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Strawberry_Doughnuts, Wildflour.AtelierGoods_Matcha_Doughnuts, Wildflour.AtelierGoods_Cinnamon_Spice_Doughnuts, Wildflour.AtelierGoods_Lavender_Doughnuts, Wildflour.AtelierGoods_Apple_Doughnuts, Wildflour.AtelierGoods_Lemon_Doughnuts, Wildflour.AtelierGoods_Chocolate_Doughnuts"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcdoughnuts:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGdoughnuts:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGdoughnuts:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Doughnuts": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGdoughnuts": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGdoughnuts",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Doughnuts"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGcdoughnuts:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGdoughnuts.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGdoughnuts:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGdoughnuts:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+//Pudding
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "true",
+        "Enable Pudding": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGpudding": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGpudding",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Gem_Pudding, Wildflour.AtelierGoods_Mystical_Pudding, Wildflour.AtelierGoods_Cherry_Blossom_Pudding, Wildflour.AtelierGoods_Raspberry_Pudding, Wildflour.AtelierGoods_Tropical_Pudding, Wildflour.AtelierGoods_Vanilla_Pudding, Wildflour.AtelierGoods_Lemon_Pudding"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGpudding:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGpudding:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGpudding:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+},
+{
+
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "When": {
+        "Enable Regular Special Orders": "true",
+        "Enable Advanced Crafting": "false",
+        "Enable Pudding": "true"
+      },
+      "Entries": {
+    "blue704.Pelican_Town_Wholesale.WAGpudding": {
+          "Name": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.name}}",
+          "Requester": "Pierre",
+          "Duration": "TwoWeeks",
+          "Repeatable": "True",
+          "RequiredTags": "!dropbox_PierreBox, mail_FirstParsnipQuestCompleted",
+          "OrderType": "Esca.EMP/blue704.Pelican_Town_Wholesale",
+          "Condition": "PLAYER_FARMHOUSE_UPGRADE current 1",
+          "SpecialRule": "",
+          "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.text}}",
+          "RandomizedElements": [
+            {
+              "Name": "WAGpudding",
+              "Values": [
+                {
+                  "Value": "PICK_ITEM Wildflour.AtelierGoods_Flavored_Pudding"
+                }
+              ]
+            }
+          ],
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.collect.text}}",
+              "RequiredCount": "5",
+              "Data": {
+                "AcceptedContextTags": "{WAGpudding:Tags}"
+              }
+            },
+            {
+        "Type": "Donate",
+        "Text": "{{i18n:blue704.Pelican_Town_Wholesale.WAGpudding.ship.text}}",
+        "RequiredCount": "5",
+        "Data": {
+          "DropBox": "PierreBox",
+          "DropBoxGameLocation": "SeedShop",
+          "DropBoxIndicatorLocation": "18.5 27",
+          "AcceptedContextTags": "{WAGpudding:Tags}"
+        }
+      }
+    ],
+          "Rewards": [
+            {
+        "Type": "Money",
+        "Data": {
+          "Amount": "{WAGpudding:Price}",
+          "Multiplier": "25"
+        }
+      }
+          ]
+        }
+}
+}
+  ]
+}
