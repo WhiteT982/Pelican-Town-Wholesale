@@ -28,14 +28,6 @@
 }
           ],
           "Objectives": [
-            {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.collect.text}}",
-              "RequiredCount": "50",
-              "Data": {
-                "AcceptedContextTags": "{Fertilizer:Tags}"
-              }
-            },
              {
               "Type": "Deliver",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.AndyFertilizer.ship.text}}",
@@ -362,14 +354,6 @@
           "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.text}}",
           "RandomizedElements": [],
           "Objectives": [
-            {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.collect.text}}",
-              "RequiredCount": "20",
-              "Data": {
-                "AcceptedContextTags": "color_green, syrup_item"
-              }
-            },
             {
               "Type": "Deliver",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.SusansKegs.ship.text}}",

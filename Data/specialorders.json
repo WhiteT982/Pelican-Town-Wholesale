@@ -968,14 +968,6 @@
           "RandomizedElements": null,
           "Objectives": [
             {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Minerals.collect.text}}",
-              "RequiredCount": "10",
-              "Data": {
-                "AcceptedContextTags": "category_minerals"
-              }
-            },
-            {
               "Type": "Ship",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Minerals.ship.text}}",
               "RequiredCount": "10",
@@ -1006,14 +998,6 @@
           "RandomizedElements": null,
           "Objectives": [
             {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Gems.collect.text}}",
-              "RequiredCount": "10",
-              "Data": {
-                "AcceptedContextTags": "category_gem"
-              }
-            },
-            {
               "Type": "Ship",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Gems.ship.text}}",
               "RequiredCount": "10",
@@ -1043,14 +1027,6 @@
           "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.text}}",
           "RandomizedElements": null,
           "Objectives": [
-            {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.collect.text}}",
-              "RequiredCount": "10",
-              "Data": {
-                "AcceptedContextTags": "prehistoric_item/fossil_item/bone_item"
-              }
-            },
             {
               "Type": "Ship",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.Bones.ship.text}}",
@@ -1142,14 +1118,6 @@
           ],
           "Objectives": [
             {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.collect.text}}",
-              "RequiredCount": "50",
-              "Data": {
-                "AcceptedContextTags": "{Parts:Tags}"
-              }
-            },
-            {
               "Type": "Deliver",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts.ship.text}}",
               "RequiredCount": "50",
@@ -1190,14 +1158,6 @@
           ],
           "Objectives": [
             {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.collect.text}}",
-              "RequiredCount": "50",
-              "Data": {
-                "AcceptedContextTags": "{Parts:Tags}"
-              }
-            },
-            {
               "Type": "Deliver",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.ship.text}}",
               "RequiredCount": "50",
@@ -1237,14 +1197,6 @@
             }
           ],
           "Objectives": [
-            {
-              "Type": "Collect",
-              "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.collect.text}}",
-              "RequiredCount": "50",
-              "Data": {
-                "AcceptedContextTags": "{Parts:Tags}"
-              }
-            },
             {
               "Type": "Deliver",
               "Text": "{{i18n:blue704.Pelican_Town_Wholesale.MonsterParts1.ship.text}}",
