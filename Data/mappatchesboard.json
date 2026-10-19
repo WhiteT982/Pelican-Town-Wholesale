@@ -21,12 +21,14 @@
       "Target": "Maps/Town",
       "When": {
           "HasFlag": "WholesaleStoreMapPatch",
+          "Earthy Recolor": "false",
           "Season": "spring, summer, fall"
       },
+      "PatchMode": "Overlay",
       "FromFile": "assets/z_wholesaleboard.tmx",
       "FromArea": {
-        "X": 10,
-        "Y": 55,
+        "X": 0,
+        "Y": 0,
         "Width": 3,
         "Height": 3
       },
@@ -42,12 +44,60 @@
       "Target": "Maps/Town",
       "When": {
           "HasFlag": "WholesaleStoreMapPatch",
+          "Earthy Recolor": "false",
           "Season": "winter"
       },
+      "PatchMode": "Overlay",
       "FromFile": "assets/z_wholesaleboardwinter.tmx",
       "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 3,
+        "Height": 3
+      },
+      "ToArea": {
         "X": 10,
         "Y": 55,
+        "Width": 3,
+        "Height": 3
+      }
+    },
+        {
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "When": {
+          "HasFlag": "WholesaleStoreMapPatch",
+          "Earthy Recolor": "true",
+          "Season": "spring, summer, fall"
+      },
+      "PatchMode": "Overlay",
+      "FromFile": "assets/z_wholesaleboardEarthy.tmx",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 3,
+        "Height": 3
+      },
+      "ToArea": {
+        "X": 10,
+        "Y": 55,
+        "Width": 3,
+        "Height": 3
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "When": {
+          "HasFlag": "WholesaleStoreMapPatch",
+          "Earthy Recolor": "true",
+          "Season": "winter"
+      },
+      "PatchMode": "Overlay",
+      "FromFile": "assets/z_wholesaleboardwinterEarthy.tmx",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
         "Width": 3,
         "Height": 3
       },
