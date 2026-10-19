@@ -55,6 +55,13 @@
           "Amount": "{WAGchocolate:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -114,6 +121,13 @@
         "Data": {
           "Amount": "{WAGchocolate:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -175,6 +189,13 @@
           "Amount": "{WAGchocolate:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -234,6 +255,13 @@
         "Data": {
           "Amount": "{WAGchocolate:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]

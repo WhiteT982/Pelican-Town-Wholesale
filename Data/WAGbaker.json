@@ -66,6 +66,13 @@
           "Amount": "{WAGspice:Price}",
           "Multiplier": "50"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -129,6 +136,13 @@
           "Amount": "{WAGcake:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -190,6 +204,13 @@
         "Data": {
           "Amount": "{WAGcake:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -254,6 +275,20 @@
           "Amount": "{WAGmuffins:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -315,6 +350,13 @@
         "Data": {
           "Amount": "{WAGmuffins:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -379,6 +421,13 @@
           "Amount": "{WAGcc:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -440,6 +489,13 @@
         "Data": {
           "Amount": "{WAGcc:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -504,6 +560,13 @@
           "Amount": "{WAGtarts:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -566,6 +629,13 @@
         "Data": {
           "Amount": "{WAGtarts:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -631,6 +701,13 @@
           "Amount": "{WAGcookies:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -693,6 +770,13 @@
         "Data": {
           "Amount": "{WAGcookies:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -758,6 +842,13 @@
           "Amount": "{WAGdoughnuts:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -820,6 +911,13 @@
         "Data": {
           "Amount": "{WAGdoughnuts:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
@@ -885,6 +983,13 @@
           "Amount": "{WAGpudding:Price}",
           "Multiplier": "25"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }
@@ -947,6 +1052,13 @@
         "Data": {
           "Amount": "{WAGpudding:Price}",
           "Multiplier": "25"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]

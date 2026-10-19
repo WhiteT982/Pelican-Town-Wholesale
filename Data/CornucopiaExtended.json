@@ -68,6 +68,13 @@
           "Amount": "{Crops:Price}",
           "Multiplier": "50"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         }

@@ -56,6 +56,13 @@
           "Amount": "{JojaGoods:Price}",
           "Multiplier": "50"
         }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
+        }
       }
           ]
         },
@@ -107,6 +114,13 @@
         "Data": {
           "Amount": "{JojaAlcohol:Price}",
           "Multiplier": "50"
+        }
+      },
+      {
+        "Type": "Object",
+        "Data": {
+          "Item": "PrizeTicket",
+          "Amount": "1"
         }
       }
           ]
