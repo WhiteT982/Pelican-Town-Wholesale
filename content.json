@@ -1,9 +1,14 @@
 {
   "Format": "2.9.1",
   "ConfigSchema": {
-    "Board Appearance and Location": {
+    "Appearance and Location": {
       "AllowValues": "Order Board, Order Stand, Seven Deadly Sins Compatibility",
       "Default": "Order Board",
+      "Section": "Appearance and Map Compatibility"
+    },
+    "Earthy Recolor": {
+      "AllowValues": "true, false",
+      "Default": "false",
       "Section": "Appearance and Map Compatibility"
     },
     "Enable Regular Special Orders": {
@@ -126,12 +131,13 @@
       "Action": "Include",
       "FromFile": "Data/WAGbaker.json, Data/WAGale.json, Data/WAGcoffee.json, Data/WAGtea.json, Data/WAGchocolate.json"
     },
+    //Appearance
     {
       "LogName": "Change to Board",
       "Action": "Include",
       "FromFile": "Data/mappatchesboard.json",
       "When": {
-        "Board Appearance and Location": "Order Board",
+        "Appearance and Location": "Order Board",
         "Enable Regular Special Orders": "true"
       }
     },
@@ -140,7 +146,7 @@
       "Action": "Include",
       "FromFile": "Data/mappatchesstand.json",
       "When": {
-        "Board Appearance and Location": "Order Stand",
+        "Appearance and Location": "Order Stand",
         "Enable Regular Special Orders": "true"
       }
     },
@@ -149,7 +155,7 @@
       "Action": "Include",
       "FromFile": "Data/mappatchesSDS.json",
       "When": {
-        "Board Appearance and Location": "Seven Deadly Sins Compatibility",
+        "Appearance and Location": "Seven Deadly Sins Compatibility",
         "Enable Regular Special Orders": "true"
       }
     }
